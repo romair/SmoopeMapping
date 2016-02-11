@@ -4,28 +4,28 @@
   ],
   "_links": {
     "self": {
-      "href": "http://localhost:7070/users/8ee2fff2-8827-4bbd-adef-243cb3f88452"
+      "href": "http://rest.api/users/user-id"
     },
     "person": {
-      "href": "http://localhost:7070/persons/8ee2fff2-8827-4bbd-adef-243cb3f88452"
+      "href": "http://rest.api/persons/user-id"
     },
     "media": {
-      "href": "http://localhost:7070/media/user/d01a6b40-cc74-4f3d-bcea-b62122bffec2{?width,height}",
+      "href": "http://rest.api/media/user/user-id{?width,height}",
       "templated": true
     },
     "notifications": {
-      "href": "http://localhost:7070/notifications/8ee2fff2-8827-4bbd-adef-243cb3f88452"
+      "href": "http://rest.api/notifications/user-id"
     },
     "business": {
-      "href": "http://localhost:7070/businesses/92ab174a-a395-4995-9a30-244f33ad2f85"
+      "href": "http://rest.api/businesses/user-id"
     },
     "meta": {
-      "href": "http://localhost:7070/meta/8ee2fff2-8827-4bbd-adef-243cb3f88452"
+      "href": "http://rest.api/meta/user-id"
     },
     "webhooks": {
-      "href": "http://localhost:7070/_internal/webhooks/user/8ee2fff2-8827-4bbd-adef-243cb3f88452{?page,size,sort}",
+      "href": "http://rest.api/_internal/webhooks/user/user-id{?page,size,sort}",
       "templated": true
     }
   },
-  "id": "8ee2fff2-8827-4bbd-adef-243cb3f88452"
+  "id": "user-id"
 }

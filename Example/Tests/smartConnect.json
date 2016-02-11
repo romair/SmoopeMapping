@@ -1,0 +1,17 @@
+{
+  "key": "some-gmbh",
+  "description": "webchat",
+  "_links": {
+    "self": {
+      "href": "http://rest.api/smartConnects/smartConnect-id"
+    },
+    "business": {
+      "href": "http://rest.api/businesses/smartConnect-id"
+    },
+    "qrcode": {
+      "href": "http://rest.api/smartConnects/smartConnect-id/qr{?size}",
+      "templated": true
+    }
+  },
+  "id": "smartConnect-id"
+}
