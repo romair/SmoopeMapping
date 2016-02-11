@@ -19,6 +19,10 @@
 		03D8F2711C6C901200EB3425 /* SmartConnectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03D8F2701C6C901200EB3425 /* SmartConnectTests.swift */; };
 		03D8F2771C6C919100EB3425 /* bot.json in Resources */ = {isa = PBXBuildFile; fileRef = 03D8F2761C6C919100EB3425 /* bot.json */; };
 		03D8F2791C6C91AB00EB3425 /* BotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03D8F2781C6C91AB00EB3425 /* BotTests.swift */; };
+		03D8F27D1C6CA28D00EB3425 /* person.json in Resources */ = {isa = PBXBuildFile; fileRef = 03D8F27C1C6CA28D00EB3425 /* person.json */; };
+		03D8F27F1C6CA2E900EB3425 /* PersonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03D8F27E1C6CA2E900EB3425 /* PersonTests.swift */; };
+		03D8F2831C6CAFFF00EB3425 /* notificationSettings.json in Resources */ = {isa = PBXBuildFile; fileRef = 03D8F2821C6CAFFF00EB3425 /* notificationSettings.json */; };
+		03D8F2851C6CB01D00EB3425 /* NotificationSettingsTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03D8F2841C6CB01D00EB3425 /* NotificationSettingsTest.swift */; };
 		24F9D6F8E73116E965F7D60C /* Pods_ios_sdk_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 651FBBFED78E898193D6D411 /* Pods_ios_sdk_Tests.framework */; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
 		607FACD81AFB9204008FA782 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* ViewController.swift */; };
@@ -52,6 +56,10 @@
 		03D8F2701C6C901200EB3425 /* SmartConnectTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SmartConnectTests.swift; sourceTree = "<group>"; };
 		03D8F2761C6C919100EB3425 /* bot.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = bot.json; sourceTree = "<group>"; };
 		03D8F2781C6C91AB00EB3425 /* BotTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BotTests.swift; sourceTree = "<group>"; };
+		03D8F27C1C6CA28D00EB3425 /* person.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = person.json; sourceTree = "<group>"; };
+		03D8F27E1C6CA2E900EB3425 /* PersonTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonTests.swift; sourceTree = "<group>"; };
+		03D8F2821C6CAFFF00EB3425 /* notificationSettings.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = notificationSettings.json; sourceTree = "<group>"; };
+		03D8F2841C6CB01D00EB3425 /* NotificationSettingsTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationSettingsTest.swift; sourceTree = "<group>"; };
 		2EC014E6D7CB43A877408049 /* Pods-ios-sdk_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ios-sdk_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ios-sdk_Tests/Pods-ios-sdk_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* ios-sdk_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ios-sdk_Example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -99,6 +107,8 @@
 				03D8F2671C6C8E1C00EB3425 /* user.json */,
 				03D8F26E1C6C8FA000EB3425 /* smartConnect.json */,
 				03D8F2761C6C919100EB3425 /* bot.json */,
+				03D8F27C1C6CA28D00EB3425 /* person.json */,
+				03D8F2821C6CAFFF00EB3425 /* notificationSettings.json */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -119,7 +129,6 @@
 				607FACF51AFB993E008FA782 /* Podspec Metadata */,
 				607FACD21AFB9204008FA782 /* Example for ios-sdk */,
 				607FACE81AFB9204008FA782 /* Tests */,
-				607FACD11AFB9204008FA782 /* Products */,
 				826A0A400761CD7A6324AF63 /* Pods */,
 				2A20ED2F160EF92E64727EE7 /* Frameworks */,
 			);
@@ -132,6 +141,7 @@
 				607FACE51AFB9204008FA782 /* ios-sdk_Tests.xctest */,
 			);
 			name = Products;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		607FACD21AFB9204008FA782 /* Example for ios-sdk */ = {
@@ -167,6 +177,9 @@
 				03D8F2691C6C8E4A00EB3425 /* UserTests.swift */,
 				03D8F2701C6C901200EB3425 /* SmartConnectTests.swift */,
 				03D8F2781C6C91AB00EB3425 /* BotTests.swift */,
+				03D8F27E1C6CA2E900EB3425 /* PersonTests.swift */,
+				03D8F2841C6CB01D00EB3425 /* NotificationSettingsTest.swift */,
+				607FACD11AFB9204008FA782 /* Products */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -297,6 +310,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				03D8F2831C6CAFFF00EB3425 /* notificationSettings.json in Resources */,
+				03D8F27D1C6CA28D00EB3425 /* person.json in Resources */,
 				03D8F26B1C6C8E7200EB3425 /* user.json in Resources */,
 				03D8F2601C6C868300EB3425 /* conversation.json in Resources */,
 				03D8F26F1C6C8FA000EB3425 /* smartConnect.json in Resources */,
@@ -415,7 +430,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				03D8F2711C6C901200EB3425 /* SmartConnectTests.swift in Sources */,
+				03D8F2851C6CB01D00EB3425 /* NotificationSettingsTest.swift in Sources */,
 				03D8F26A1C6C8E4A00EB3425 /* UserTests.swift in Sources */,
+				03D8F27F1C6CA2E900EB3425 /* PersonTests.swift in Sources */,
 				03D8F24F1C6C63E500EB3425 /* BaseTests.swift in Sources */,
 				03D8F2791C6C91AB00EB3425 /* BotTests.swift in Sources */,
 				03D8F25D1C6C85B800EB3425 /* ConversationTests.swift in Sources */,

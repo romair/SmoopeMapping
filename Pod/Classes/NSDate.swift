@@ -18,20 +18,20 @@ import Foundation
 
 extension NSDate {
   
-  struct Date {
-    static let formatterISO8601: NSDateFormatter = {
+  struct ISO8601 {
+    static func formatter(format: String) -> NSDateFormatter {
       let formatter = NSDateFormatter()
       formatter.calendar = NSCalendar(calendarIdentifier: NSCalendarIdentifierISO8601)
-      formatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'"
+      formatter.dateFormat = format
       return formatter
-    }()
+    }
   }
   
-  public static func fromISO8601String(value: String) -> NSDate {
-    return Date.formatterISO8601.dateFromString(value)!
+  public static func fromISO8601String(value: String, format: String = "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'") -> NSDate {
+    return ISO8601.formatter(format).dateFromString(value)!
   }
   
-  public func toISO8601String() -> String {
-    return Date.formatterISO8601.stringFromDate(self)
+  public func toISO8601String(format: String = "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'") -> String {
+    return ISO8601.formatter(format).stringFromDate(self)
   }
 }

@@ -95,10 +95,10 @@ public class Business: Identified {
       result["coordinates"] = coordinates.unmap()
     }
     if !states.isEmpty {
-      result["states"] = states.map({ i in i.rawValue })
+      result["states"] = states.map({ state in state.rawValue })
     }
     if !tags.isEmpty {
-      result["tags"] = tags.map({ i in i })
+      result["tags"] = tags.map({ tag in tag })
     }
     
     return result

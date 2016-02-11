@@ -1,0 +1,13 @@
+{
+  "settings": {
+    "email": [
+              "newChat",
+              "newMessage"
+              ]
+  },
+  "_links": {
+    "self": {
+      "href": "http://rest.api/notifications/user-id"
+    }
+  }
+}

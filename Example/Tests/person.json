@@ -1,0 +1,15 @@
+{
+  "givenName": "John",
+  "familyName": "Doe",
+  "birthDate": "2015-12-01T00:00:00Z",
+  "email": "some@business.de",
+  "telephone": "+490000000",
+  "_links": {
+    "self": {
+      "href": "http://rest.api/persons/user-id"
+    },
+    "user": {
+      "href": "http://rest.api/users/user-id"
+    }
+  }
+}
