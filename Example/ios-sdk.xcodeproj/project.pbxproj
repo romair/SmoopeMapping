@@ -14,6 +14,7 @@
 		034447DF1C6CD22B00363454 /* messages.json in Resources */ = {isa = PBXBuildFile; fileRef = 034447DD1C6CD1C100363454 /* messages.json */; };
 		034447E11C6CD23A00363454 /* MessageTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 034447E01C6CD23A00363454 /* MessageTests.swift */; };
 		034447E31C6CD26800363454 /* message.json in Resources */ = {isa = PBXBuildFile; fileRef = 034447E21C6CD26800363454 /* message.json */; };
+		034447E91C6CF30900363454 /* SmoopeSDK.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 034447E81C6CF30900363454 /* SmoopeSDK.podspec */; };
 		03D8F24A1C6C618200EB3425 /* business.json in Resources */ = {isa = PBXBuildFile; fileRef = 03D8F2431C6C614D00EB3425 /* business.json */; };
 		03D8F24B1C6C618500EB3425 /* BusinessTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03D8F2441C6C614D00EB3425 /* BusinessTests.swift */; };
 		03D8F24F1C6C63E500EB3425 /* BaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03D8F24E1C6C63E500EB3425 /* BaseTests.swift */; };
@@ -57,6 +58,7 @@
 		034447DD1C6CD1C100363454 /* messages.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = messages.json; sourceTree = "<group>"; };
 		034447E01C6CD23A00363454 /* MessageTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageTests.swift; sourceTree = "<group>"; };
 		034447E21C6CD26800363454 /* message.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = message.json; sourceTree = "<group>"; };
+		034447E81C6CF30900363454 /* SmoopeSDK.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = SmoopeSDK.podspec; path = ../SmoopeSDK.podspec; sourceTree = "<group>"; };
 		03D8F2431C6C614D00EB3425 /* business.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = business.json; sourceTree = "<group>"; };
 		03D8F2441C6C614D00EB3425 /* BusinessTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BusinessTests.swift; sourceTree = "<group>"; };
 		03D8F24C1C6C633E00EB3425 /* ios_sdk.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ios_sdk.framework; path = "Pods/../build/Debug-iphoneos/ios_sdk.framework"; sourceTree = "<group>"; };
@@ -87,7 +89,6 @@
 		651FBBFED78E898193D6D411 /* Pods_ios_sdk_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ios_sdk_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E2AA90BB1CF42C1CF631B2B /* Pods-ios-sdk_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ios-sdk_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ios-sdk_Example/Pods-ios-sdk_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		9106360E3826092E7BB13815 /* Pods-ios-sdk_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ios-sdk_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ios-sdk_Tests/Pods-ios-sdk_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		A88DF523896125EA914D6EE3 /* ios-sdk.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = "ios-sdk.podspec"; path = "../ios-sdk.podspec"; sourceTree = "<group>"; };
 		BFBFC9767A9C37EB29F708C2 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		CC1F402118082A26FA064984 /* Pods-ios-sdk_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ios-sdk_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-ios-sdk_Example/Pods-ios-sdk_Example.release.xcconfig"; sourceTree = "<group>"; };
 		EAAD529B037363473E3FC24B /* Pods_ios_sdk_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ios_sdk_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -216,7 +217,7 @@
 		607FACF51AFB993E008FA782 /* Podspec Metadata */ = {
 			isa = PBXGroup;
 			children = (
-				A88DF523896125EA914D6EE3 /* ios-sdk.podspec */,
+				034447E81C6CF30900363454 /* SmoopeSDK.podspec */,
 				BFBFC9767A9C37EB29F708C2 /* LICENSE */,
 				03D8F2501C6C7CEC00EB3425 /* NOTICE */,
 			);
@@ -322,6 +323,7 @@
 			files = (
 				03D8F2511C6C7CEC00EB3425 /* NOTICE in Resources */,
 				607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */,
+				034447E91C6CF30900363454 /* SmoopeSDK.podspec in Resources */,
 				607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */,
 				607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */,
 			);

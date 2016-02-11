@@ -15,13 +15,13 @@
 */
 
 import XCTest
-import ios_sdk
+import SmoopeSDK
 
 class SmartConnectTests: BaseTests {
   
   func testSingle() {
     let resource = getResource("smartConnect")
-    let result = SmartConnect(data: resource)
+    let result = SPSmartConnect(data: resource)
     
     XCTAssertNotNil(result, "Mapped object shouldn't be nil")
     XCTAssertEqual(result.id, resource["id"] as? String)
@@ -31,6 +31,6 @@ class SmartConnectTests: BaseTests {
   }
   
   func testCollection() {
-    testCollection(SmartConnectList(data: getResource("smartConnects")))
+    testCollection(SPSmartConnectList(data: getResource("smartConnects")))
   }
 }

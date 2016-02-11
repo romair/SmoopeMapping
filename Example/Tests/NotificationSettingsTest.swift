@@ -15,17 +15,17 @@
 */
 
 import XCTest
-import ios_sdk
+import SmoopeSDK
 
 class NotificationSettingsTests: BaseTests {
   
   func testSingle() {
     let resource = getResource("notificationSettings")
-    let result = NotificationSettings(data: resource)
+    let result = SPNotificationSettings(data: resource)
     
     XCTAssertNotNil(result, "Mapped object shouldn't be nil")
     XCTAssert(result.settings.count == 1)
-    XCTAssert(result.settings[NotificationSettings.Target.Email]!.count == 2)
+    XCTAssert(result.settings[SPNotificationSettings.Target.Email]!.count == 2)
     XCTAssert(result.links.count == 1)
   }
 }

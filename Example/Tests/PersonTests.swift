@@ -15,13 +15,13 @@
 */
 
 import XCTest
-import ios_sdk
+import SmoopeSDK
 
 class PersonTests: BaseTests {
   
   func testSingle() {
     let resource = getResource("person")
-    let result = Person(data: resource)
+    let result = SPPerson(data: resource)
     
     XCTAssertNotNil(result, "Mapped object shouldn't be nil")
     XCTAssertEqual(result.givenName, resource["givenName"] as? String)

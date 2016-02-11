@@ -16,7 +16,7 @@
 
 import XCTest
 import SwiftyJSON
-import ios_sdk
+import SmoopeSDK
 
 class BaseTests: XCTestCase {
     
@@ -26,7 +26,7 @@ class BaseTests: XCTestCase {
     return JSON(data: jsonData!).dictionaryObject!
   }
   
-  func testCollection<T>(collection: PagedList<T>) {
+  func testCollection<T>(collection: SPPagedList<T>) {
     XCTAssertNotNil(collection, "Mapped object shouldn't be nil")
     XCTAssert(collection.content.count == 2)
     XCTAssert(collection.size == 2)

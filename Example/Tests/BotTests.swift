@@ -15,13 +15,13 @@
 */
 
 import XCTest
-import ios_sdk
+import SmoopeSDK
 
 class BotTests: BaseTests {
   
   func testSingle() {
     let resource = getResource("bot")
-    let result = Bot(data: resource)
+    let result = SPBot(data: resource)
     
     XCTAssertNotNil(result, "Mapped object shouldn't be nil")
     XCTAssertEqual(result.displayName, resource["displayName"] as? String)

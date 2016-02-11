@@ -15,13 +15,13 @@
 */
 
 import XCTest
-import ios_sdk
+import SmoopeSDK
 
 class ConversationTests: BaseTests {
   
   func testSingle() {
     let resource = getResource("conversation")
-    let result = Conversation(data: resource)
+    let result = SPConversation(data: resource)
     
     XCTAssertNotNil(result, "Mapped object shouldn't be nil")
     XCTAssertEqual(result.id, resource["id"] as? String)
@@ -33,6 +33,6 @@ class ConversationTests: BaseTests {
   }
   
   func testCollection() {
-    testCollection(ConversationList(data: getResource("conversations")))
+    testCollection(SPConversationList(data: getResource("conversations")))
   }
 }
