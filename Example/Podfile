@@ -8,5 +8,5 @@ end
 target 'ios-sdk_Tests', :exclusive => true do
   pod 'ios-sdk', :path => '../'
 
-  
+  pod 'SwiftyJSON', :git => 'https://github.com/SwiftyJSON/SwiftyJSON.git'
 end

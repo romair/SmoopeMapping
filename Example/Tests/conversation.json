@@ -1,0 +1,31 @@
+{
+  "created": "2015-12-08T09:38:25.755Z",
+  "lastActivity": "2016-01-30T06:00:33.525Z",
+  "unreadMessages": 0,
+  "status": [
+    "starred",
+    "hidden"
+  ],
+  "_links": {
+    "self": {
+      "href": "http://rest.api/chats/conversation-id"
+    },
+    "user": {
+      "href": "http://rest.api/users/conversation-id"
+    },
+    "business": {
+      "href": "http://rest.api/businesses/conversation-id"
+    },
+    "messages": {
+      "href": "http://rest.api/messages?chat=conversation-id{&page,size,sort,after,before}",
+      "templated": true
+    },
+    "attachments": {
+      "href": "http://rest.api/media/chat/conversation-id"
+    },
+    "typing": {
+      "href": "http://rest.api/chats/conversation-id/typing"
+    }
+  },
+  "id": "conversation-id"
+}

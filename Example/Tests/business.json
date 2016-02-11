@@ -1,0 +1,53 @@
+{
+  "name": "Some business",
+  "description": "Very interesting business",
+  "tags": [
+    "interesting"
+  ],
+  "telephone": "+490000000",
+  "email": "some@business.de",
+  "address": "Some address",
+  "coordinates": {
+    "latitude": 52.3875629,
+    "longitude": 13.1028718
+  },
+  "smsSender": "business",
+  "statusMessage": "Hi there",
+  "status": [
+    "online"
+  ],
+  "_links": {
+    "self": {
+      "href": "http://rest.api/businesses/business-id"
+    },
+    "media": {
+      "href": "http://rest.api/media/business/business-id{?width,height}",
+      "templated": true
+    },
+    "conversations": {
+      "href": "http://rest.api/chats{?page,size,sort,filter,id}",
+      "templated": true
+    },
+    "staff": {
+      "href": "http://rest.api/users/staff/business-id{?page,size,sort,id}",
+      "templated": true
+    },
+    "customers": {
+      "href": "http://rest.api/users/customers/business-id{?page,size,sort,group,id}",
+      "templated": true
+    },
+    "bots": {
+      "href": "http://rest.api/users/bots/business-id{?page,size,sort,id}",
+      "templated": true
+    },
+    "smartConnects": {
+      "href": "http://rest.api/smartConnects{?page,size,sort,id}",
+      "templated": true
+    },
+    "webhooks": {
+      "href": "http://rest.api/_internal/webhooks/business/business-id{?page,size,sort}",
+      "templated": true
+    }
+  },
+  "id": "business-id"
+}
