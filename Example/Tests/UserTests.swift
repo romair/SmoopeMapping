@@ -17,18 +17,15 @@
 import XCTest
 import ios_sdk
 
-class ConversationTests: BaseTests {
+class UserTests: BaseTests {
   
   func testSingle() {
-    let resource = getResource("conversation")
-    let result = Conversation(data: resource)
+    let resource = getResource("user")
+    let result = User(data: resource)
     
     XCTAssertNotNil(result, "Mapped object shouldn't be nil")
     XCTAssertEqual(result.id, resource["id"] as? String)
-    XCTAssertEqual(result.created, NSDate.fromISO8601String(resource["created"] as! String))
-    XCTAssertEqual(result.lastActivity, NSDate.fromISO8601String(resource["lastActivity"] as! String))
-    XCTAssertEqual(result.unreadMessages, resource["unreadMessages"] as? Int)
-    XCTAssert(result.states.count == 2)
-    XCTAssert(result.links.count == 6)
+    XCTAssert(result.states.count == 1)
+    XCTAssert(result.links.count == 7)
   }
 }

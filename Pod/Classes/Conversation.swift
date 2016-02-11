@@ -27,9 +27,9 @@ public class Conversation: Identified {
   public private(set) var states: [ConversationState] = []
   
   public required init(data: Dictionary<String, AnyObject>) {
-    self.created = NSDate().fromISO8601String(data["created"] as! String)
+    self.created = NSDate.fromISO8601String(data["created"] as! String)
     if let lastActivity = data["lastActivity"] {
-      self.lastActivity = NSDate().fromISO8601String(lastActivity as! String)
+      self.lastActivity = NSDate.fromISO8601String(lastActivity as! String)
     }
     if let unreadMessages = data["unreadMessages"] {
       self.unreadMessages = unreadMessages as? Int

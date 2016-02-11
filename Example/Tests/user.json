@@ -1,0 +1,31 @@
+{
+  "status": [
+    "admin"
+  ],
+  "_links": {
+    "self": {
+      "href": "http://localhost:7070/users/8ee2fff2-8827-4bbd-adef-243cb3f88452"
+    },
+    "person": {
+      "href": "http://localhost:7070/persons/8ee2fff2-8827-4bbd-adef-243cb3f88452"
+    },
+    "media": {
+      "href": "http://localhost:7070/media/user/d01a6b40-cc74-4f3d-bcea-b62122bffec2{?width,height}",
+      "templated": true
+    },
+    "notifications": {
+      "href": "http://localhost:7070/notifications/8ee2fff2-8827-4bbd-adef-243cb3f88452"
+    },
+    "business": {
+      "href": "http://localhost:7070/businesses/92ab174a-a395-4995-9a30-244f33ad2f85"
+    },
+    "meta": {
+      "href": "http://localhost:7070/meta/8ee2fff2-8827-4bbd-adef-243cb3f88452"
+    },
+    "webhooks": {
+      "href": "http://localhost:7070/_internal/webhooks/user/8ee2fff2-8827-4bbd-adef-243cb3f88452{?page,size,sort}",
+      "templated": true
+    }
+  },
+  "id": "8ee2fff2-8827-4bbd-adef-243cb3f88452"
+}

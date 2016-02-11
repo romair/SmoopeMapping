@@ -16,22 +16,25 @@
 
 import Foundation
 
-extension NSDate {
+public class User: Identified {
   
-  struct Date {
-    static let formatterISO8601: NSDateFormatter = {
-      let formatter = NSDateFormatter()
-      formatter.calendar = NSCalendar(calendarIdentifier: NSCalendarIdentifierISO8601)
-      formatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'"
-      return formatter
-    }()
+  public private(set) var states: [UserState] = []
+  
+  public required init(data: Dictionary<String, AnyObject>) {
+    if let states = data["status"] {
+      self.states = (states as! [String]).map({ s in UserState(rawValue: s)!})
+    }
+    
+    super.init(data: data)
   }
   
-  public static func fromISO8601String(value: String) -> NSDate {
-    return Date.formatterISO8601.dateFromString(value)!
-  }
-  
-  public func toISO8601String() -> String {
-    return Date.formatterISO8601.stringFromDate(self)
+  public override func unmap() -> Dictionary<String, AnyObject> {
+    var result: Dictionary<String, AnyObject> = [: ]
+    if !states.isEmpty {
+      result["states"] = states.map({ i in i.rawValue })
+    }
+    
+    return result
+      .append(super.unmap())
   }
 }
