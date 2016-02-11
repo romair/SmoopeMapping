@@ -17,7 +17,7 @@ Pod::Spec.new do |s|
 #   * Write the description between the DESC delimiters below.
 #   * Finally, don't worry about the indent, CocoaPods strips it!  
   s.description      = <<-DESC
-Swift implementation of smoope RESTful API.
+Swift implementation of smoope RESTful API. All the documentation located at Smoope developers portal.
                        DESC
 
   s.homepage         = "https://github.com/smoope/ios-sdk"
