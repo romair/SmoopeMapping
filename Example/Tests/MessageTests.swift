@@ -26,6 +26,7 @@ class MessageTests: BaseTests {
     XCTAssertNotNil(result, "Mapped object shouldn't be nil")
     XCTAssertEqual(result.id, resource["id"] as? String)
     XCTAssertEqual(result.created, NSDate.fromISO8601String(resource["created"] as! String))
+    XCTAssert(result.parts.count == 1)
     XCTAssert(result.states.count == 1)
     XCTAssert(result.links.count == 3)
   }

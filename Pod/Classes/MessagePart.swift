@@ -16,21 +16,30 @@
 
 import Foundation
 
-public class Message: Created {
+public class MessagePart: Base {
   
-  public private(set) var states: [MessageState] = []
+  private var mimeType: String?
   
-  public var parts: [MessagePart] = []
+  private var encoding: String?
+  
+  private var body: String?
+  
+  private var filename: String?
+  
+  private var url: String?
   
   public required init(data: Dictionary<String, AnyObject>) {
-    if let states = data["status"] {
-      self.states = (states as! [String]).map({ s in MessageState(rawValue: s)!})
+    if let mimeType = data["mimeType"] {
+      self.mimeType = mimeType as? String
     }
-    if let parts = data["_embedded"]!["parts"] {
-      self.parts = (parts as! [AnyObject])
-        .map { v in
-          MessagePart(data: v as! Dictionary<String, AnyObject>)
-        }
+    if let encoding = data["encoding"] {
+      self.encoding = encoding as? String
+    }
+    if let body = data["body"] {
+      self.body = body as? String
+    }
+    if let filename = data["filename"] {
+      self.filename = filename as? String
     }
     
     super.init(data: data)
@@ -38,11 +47,20 @@ public class Message: Created {
   
   public override func unmap() -> Dictionary<String, AnyObject> {
     var result: Dictionary<String, AnyObject> = [:]
-    if !states.isEmpty {
-      result["states"] = states.map({ i in i.rawValue })
+    if let mimeType = self.mimeType {
+      result["mimeType"] = mimeType
     }
-    if !parts.isEmpty {
-      result["parts"] = parts.map({ part in part.unmap() })
+    if let encoding = self.encoding {
+      result["encoding"] = encoding
+    }
+    if let body = self.body {
+      result["body"] = body
+    }
+    if let filename = self.filename {
+      result["filename"] = filename
+    }
+    if let url = self.url {
+      result["url"] = url
     }
     
     return result
