@@ -48,4 +48,56 @@ public class Message: Created {
     return result
       .append(super.unmap())
   }
+  
+  public class MessagePart: Base {
+    
+    private var mimeType: String?
+    
+    private var encoding: String?
+    
+    private var body: String?
+    
+    private var filename: String?
+    
+    private var url: String?
+    
+    public required init(data: Dictionary<String, AnyObject>) {
+      if let mimeType = data["mimeType"] {
+        self.mimeType = mimeType as? String
+      }
+      if let encoding = data["encoding"] {
+        self.encoding = encoding as? String
+      }
+      if let body = data["body"] {
+        self.body = body as? String
+      }
+      if let filename = data["filename"] {
+        self.filename = filename as? String
+      }
+      
+      super.init(data: data)
+    }
+    
+    public override func unmap() -> Dictionary<String, AnyObject> {
+      var result: Dictionary<String, AnyObject> = [:]
+      if let mimeType = self.mimeType {
+        result["mimeType"] = mimeType
+      }
+      if let encoding = self.encoding {
+        result["encoding"] = encoding
+      }
+      if let body = self.body {
+        result["body"] = body
+      }
+      if let filename = self.filename {
+        result["filename"] = filename
+      }
+      if let url = self.url {
+        result["url"] = url
+      }
+      
+      return result
+        .append(super.unmap())
+    }
+  }
 }
