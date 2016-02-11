@@ -1,0 +1,11 @@
+{
+  "displayName": "Autobot",
+  "_links": {
+    "self": {
+      "href": "http://rest.api/bots/user-id"
+    },
+    "user": {
+      "href": "http://rest.api/users/user-id"
+    }
+  }
+}

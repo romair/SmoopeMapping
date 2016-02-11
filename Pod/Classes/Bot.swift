@@ -16,23 +16,18 @@
 
 import Foundation
 
-public class User: Identified {
+public class Bot: UserInfo {
   
-  public private(set) var states: [UserState] = []
+  public var displayName: String
   
   public required init(data: Dictionary<String, AnyObject>) {
-    if let states = data["status"] {
-      self.states = (states as! [String]).map({ s in UserState(rawValue: s)!})
-    }
+    self.displayName = data["displayName"] as! String
     
     super.init(data: data)
   }
   
   public override func unmap() -> Dictionary<String, AnyObject> {
-    var result: Dictionary<String, AnyObject> = [:]
-    if !states.isEmpty {
-      result["states"] = states.map({ i in i.rawValue })
-    }
+    var result: Dictionary<String, AnyObject> = ["displayName": displayName]
     
     return result
       .append(super.unmap())

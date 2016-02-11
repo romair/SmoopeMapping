@@ -16,25 +16,9 @@
 
 import Foundation
 
-public class User: Identified {
-  
-  public private(set) var states: [UserState] = []
+public class UserInfo: Base {
   
   public required init(data: Dictionary<String, AnyObject>) {
-    if let states = data["status"] {
-      self.states = (states as! [String]).map({ s in UserState(rawValue: s)!})
-    }
-    
     super.init(data: data)
-  }
-  
-  public override func unmap() -> Dictionary<String, AnyObject> {
-    var result: Dictionary<String, AnyObject> = [:]
-    if !states.isEmpty {
-      result["states"] = states.map({ i in i.rawValue })
-    }
-    
-    return result
-      .append(super.unmap())
   }
 }

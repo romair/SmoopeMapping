@@ -14,27 +14,17 @@
 * limitations under the License.
 */
 
-import Foundation
+import XCTest
+import ios_sdk
 
-public class User: Identified {
+class BotTests: BaseTests {
   
-  public private(set) var states: [UserState] = []
-  
-  public required init(data: Dictionary<String, AnyObject>) {
-    if let states = data["status"] {
-      self.states = (states as! [String]).map({ s in UserState(rawValue: s)!})
-    }
+  func testSingle() {
+    let resource = getResource("bot")
+    let result = Bot(data: resource)
     
-    super.init(data: data)
-  }
-  
-  public override func unmap() -> Dictionary<String, AnyObject> {
-    var result: Dictionary<String, AnyObject> = [:]
-    if !states.isEmpty {
-      result["states"] = states.map({ i in i.rawValue })
-    }
-    
-    return result
-      .append(super.unmap())
+    XCTAssertNotNil(result, "Mapped object shouldn't be nil")
+    XCTAssertEqual(result.displayName, resource["displayName"] as? String)
+    XCTAssert(result.links.count == 2)
   }
 }
