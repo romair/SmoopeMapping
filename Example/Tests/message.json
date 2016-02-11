@@ -1,0 +1,31 @@
+{
+  "_embedded": {
+    "parts": [
+              {
+              "mimeType": "text/plain",
+              "body": "test",
+              "_links": {
+              "self": {
+              "href": "http://rest.api/parts/part-id"
+              }
+              }
+              }
+              ]
+  },
+  "_links": {
+    "self": {
+      "href": "http://rest.api/messages/messsage-id"
+    },
+    "conversation": {
+      "href": "http://rest.api/chats/conversation-id"
+    },
+    "user": {
+      "href": "http://rest.api/users/user-id"
+    }
+  },
+  "created": "2016-01-30T06:00:33.525Z",
+  "status": [
+             "unread"
+             ],
+  "id": "message-id"
+}

@@ -1,0 +1,88 @@
+{
+  "_embedded": {
+    "messages": [
+                 {
+                 "_embedded": {
+                 "parts": [
+                           {
+                           "mimeType": "text/plain",
+                           "body": "#test",
+                           "_links": {
+                           "self": {
+                           "href": "http://rest.api/parts/part-id"
+                           }
+                           }
+                           }
+                           ]
+                 },
+                 "_links": {
+                 "self": {
+                 "href": "http://rest.api/messages/message-id"
+                 },
+                 "conversation": {
+                 "href": "http://rest.api/chats/conversation-id"
+                 },
+                 "user": {
+                 "href": "http://rest.api/users/user-id"
+                 }
+                 },
+                 "created": "2016-01-30T06:00:33.525Z",
+                 "status": [
+                            "unread"
+                            ],
+                 "id": "message-id"
+                 },
+                 {
+                 "_embedded": {
+                 "parts": [
+                           {
+                           "mimeType": "text/plain",
+                           "body": "/test ",
+                           "_links": {
+                           "self": {
+                           "href": "http://rest.api/parts/part-id"
+                           }
+                           }
+                           }
+                           ]
+                 },
+                 "_links": {
+                 "self": {
+                 "href": "http://rest.api/messages/message-id"
+                 },
+                 "conversation": {
+                 "href": "http://rest.api/chats/conversation-id"
+                 },
+                 "user": {
+                 "href": "http://rest.api/users/user-id"
+                 }
+                 },
+                 "created": "2016-01-30T06:00:17.094Z",
+                 "status": [
+                            "unread"
+                            ],
+                 "id": "message-id"
+                 }
+                 ]
+  },
+  "_links": {
+    "first": {
+      "href": "http://rest.api/messages?chat=conversation-id&page=0&size=2&sort=created,desc"
+    },
+    "self": {
+      "href": "http://rest.api/messages?chat=conversation-id&size=2"
+    },
+    "next": {
+      "href": "http://rest.api/messages?chat=conversation-id&page=1&size=2&sort=created,desc"
+    },
+    "last": {
+      "href": "http://rest.api/messages?chat=conversation-id&page=13&size=2&sort=created,desc"
+    }
+  },
+  "page":{
+    "size":2,
+    "totalElements":4,
+    "totalPages":2,
+    "number":0
+  }
+}

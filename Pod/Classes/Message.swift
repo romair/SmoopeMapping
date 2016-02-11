@@ -16,23 +16,13 @@
 
 import Foundation
 
-public class Conversation: Created {
+public class Message: Created {
   
-  public var lastActivity: NSDate?
-  
-  public var unreadMessages: Int?
-  
-  public private(set) var states: [ConversationState] = []
+  public private(set) var states: [MessageState] = []
   
   public required init(data: Dictionary<String, AnyObject>) {
-    if let lastActivity = data["lastActivity"] {
-      self.lastActivity = NSDate.fromISO8601String(lastActivity as! String)
-    }
-    if let unreadMessages = data["unreadMessages"] {
-      self.unreadMessages = unreadMessages as? Int
-    }
     if let states = data["status"] {
-      self.states = (states as! [String]).map({ s in ConversationState(rawValue: s)!})
+      self.states = (states as! [String]).map({ s in MessageState(rawValue: s)!})
     }
     
     super.init(data: data)
@@ -40,12 +30,6 @@ public class Conversation: Created {
   
   public override func unmap() -> Dictionary<String, AnyObject> {
     var result: Dictionary<String, AnyObject> = [:]
-    if let lastActivity = self.lastActivity {
-      result["lastActivity"] = lastActivity.toISO8601String()
-    }
-    if let unreadMessages = self.unreadMessages {
-      result["unreadMessages"] = unreadMessages
-    }
     if !states.isEmpty {
       result["states"] = states.map({ i in i.rawValue })
     }

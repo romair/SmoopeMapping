@@ -11,6 +11,9 @@
 		034447D01C6CCBBB00363454 /* smartConnects.json in Resources */ = {isa = PBXBuildFile; fileRef = 034447CF1C6CCBBB00363454 /* smartConnects.json */; };
 		034447D21C6CCD3F00363454 /* businesses.json in Resources */ = {isa = PBXBuildFile; fileRef = 034447D11C6CCD3F00363454 /* businesses.json */; };
 		034447D41C6CCE0200363454 /* conversations.json in Resources */ = {isa = PBXBuildFile; fileRef = 034447D31C6CCE0200363454 /* conversations.json */; };
+		034447DF1C6CD22B00363454 /* messages.json in Resources */ = {isa = PBXBuildFile; fileRef = 034447DD1C6CD1C100363454 /* messages.json */; };
+		034447E11C6CD23A00363454 /* MessageTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 034447E01C6CD23A00363454 /* MessageTests.swift */; };
+		034447E31C6CD26800363454 /* message.json in Resources */ = {isa = PBXBuildFile; fileRef = 034447E21C6CD26800363454 /* message.json */; };
 		03D8F24A1C6C618200EB3425 /* business.json in Resources */ = {isa = PBXBuildFile; fileRef = 03D8F2431C6C614D00EB3425 /* business.json */; };
 		03D8F24B1C6C618500EB3425 /* BusinessTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03D8F2441C6C614D00EB3425 /* BusinessTests.swift */; };
 		03D8F24F1C6C63E500EB3425 /* BaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03D8F24E1C6C63E500EB3425 /* BaseTests.swift */; };
@@ -51,6 +54,9 @@
 		034447CF1C6CCBBB00363454 /* smartConnects.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = smartConnects.json; sourceTree = "<group>"; };
 		034447D11C6CCD3F00363454 /* businesses.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = businesses.json; sourceTree = "<group>"; };
 		034447D31C6CCE0200363454 /* conversations.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = conversations.json; sourceTree = "<group>"; };
+		034447DD1C6CD1C100363454 /* messages.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = messages.json; sourceTree = "<group>"; };
+		034447E01C6CD23A00363454 /* MessageTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageTests.swift; sourceTree = "<group>"; };
+		034447E21C6CD26800363454 /* message.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = message.json; sourceTree = "<group>"; };
 		03D8F2431C6C614D00EB3425 /* business.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = business.json; sourceTree = "<group>"; };
 		03D8F2441C6C614D00EB3425 /* BusinessTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BusinessTests.swift; sourceTree = "<group>"; };
 		03D8F24C1C6C633E00EB3425 /* ios_sdk.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ios_sdk.framework; path = "Pods/../build/Debug-iphoneos/ios_sdk.framework"; sourceTree = "<group>"; };
@@ -121,6 +127,8 @@
 				034447CF1C6CCBBB00363454 /* smartConnects.json */,
 				034447D11C6CCD3F00363454 /* businesses.json */,
 				034447D31C6CCE0200363454 /* conversations.json */,
+				034447DD1C6CD1C100363454 /* messages.json */,
+				034447E21C6CD26800363454 /* message.json */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -192,6 +200,7 @@
 				03D8F27E1C6CA2E900EB3425 /* PersonTests.swift */,
 				03D8F2841C6CB01D00EB3425 /* NotificationSettingsTest.swift */,
 				607FACD11AFB9204008FA782 /* Products */,
+				034447E01C6CD23A00363454 /* MessageTests.swift */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -327,9 +336,11 @@
 				03D8F26B1C6C8E7200EB3425 /* user.json in Resources */,
 				03D8F2601C6C868300EB3425 /* conversation.json in Resources */,
 				034447C81C6CC7B000363454 /* users.json in Resources */,
+				034447DF1C6CD22B00363454 /* messages.json in Resources */,
 				034447D41C6CCE0200363454 /* conversations.json in Resources */,
 				034447D21C6CCD3F00363454 /* businesses.json in Resources */,
 				03D8F26F1C6C8FA000EB3425 /* smartConnect.json in Resources */,
+				034447E31C6CD26800363454 /* message.json in Resources */,
 				03D8F2771C6C919100EB3425 /* bot.json in Resources */,
 				034447D01C6CCBBB00363454 /* smartConnects.json in Resources */,
 				03D8F24A1C6C618200EB3425 /* business.json in Resources */,
@@ -449,6 +460,7 @@
 				03D8F2851C6CB01D00EB3425 /* NotificationSettingsTest.swift in Sources */,
 				03D8F26A1C6C8E4A00EB3425 /* UserTests.swift in Sources */,
 				03D8F27F1C6CA2E900EB3425 /* PersonTests.swift in Sources */,
+				034447E11C6CD23A00363454 /* MessageTests.swift in Sources */,
 				03D8F24F1C6C63E500EB3425 /* BaseTests.swift in Sources */,
 				03D8F2791C6C91AB00EB3425 /* BotTests.swift in Sources */,
 				03D8F25D1C6C85B800EB3425 /* ConversationTests.swift in Sources */,
