@@ -16,7 +16,7 @@
 
 import Foundation
 
-public class Person: UserInfo {
+public class SPPerson: SPUserInfo {
   
   public var givenName: String
   
@@ -39,7 +39,7 @@ public class Person: UserInfo {
     super.init(data: [:])
   }
   
-  public required init(data: Dictionary<String, AnyObject>) {
+  public required init(data: [String: AnyObject]) {
     self.givenName = data["givenName"] as! String
     self.familyName = data["familyName"] as! String
     if let birthDate = data["birthDate"] {
@@ -58,8 +58,8 @@ public class Person: UserInfo {
     super.init(data: data)
   }
   
-  public override func unmap() -> Dictionary<String, AnyObject> {
-    var result: Dictionary<String, AnyObject> = [
+  public override func unmap() -> [String: AnyObject] {
+    var result: [String: AnyObject] = [
       "givenName": givenName,
       "familyName": familyName
     ]

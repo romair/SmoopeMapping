@@ -16,23 +16,23 @@
 
 import Foundation
 
-public class Base: Mappable, Unmappable {
+public class SPBase: SPMappable, SPUnmappable {
   
-  public var links: Dictionary<String, Link>
+  public var links: [String: SPLink]
   
-  public required init(data: Dictionary<String, AnyObject>) {
+  public required init(data: [String: AnyObject]) {
     links = [:]
     data
       .filter() { $0.0 == "_links" }
       .forEach { _, v in
-        (v as! Dictionary<String, AnyObject>).forEach { k, v in
-          links[k] = Link(data: v as! Dictionary<String, AnyObject>)
+        (v as! [String: AnyObject]).forEach { k, v in
+          links[k] = SPLink(data: v as! [String: AnyObject])
         }
       }
   }
   
-  public func unmap() -> Dictionary<String, AnyObject> {
-    var result: Dictionary<String, AnyObject> = [:]
+  public func unmap() -> [String: AnyObject] {
+    var result: [String: AnyObject] = [:]
     links.forEach{ k, v in
       result[k] = v.unmap()
     }
@@ -40,11 +40,11 @@ public class Base: Mappable, Unmappable {
     return ["_links": result]
   }
   
-  public func getLinkForRel(rel: String) -> Link? {
+  public func getLinkForRel(rel: String) -> SPLink? {
     return links[rel] ?? nil
   }
   
-  public func getLinkForSelf() -> Link? {
+  public func getLinkForSelf() -> SPLink? {
     return getLinkForRel("self")
   }
 }

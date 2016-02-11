@@ -16,20 +16,7 @@
 
 import Foundation
 
-public class Created: Identified {
+public enum SPMessageState: String {
   
-  public private(set) var created: NSDate
-  
-  public required init(data: Dictionary<String, AnyObject>) {
-    self.created = NSDate.fromISO8601String(data["created"] as! String)
-    
-    super.init(data: data)
-  }
-  
-  public override func unmap() -> Dictionary<String, AnyObject> {
-    var result: Dictionary<String, AnyObject> = ["created": created.toISO8601String()]
-    
-    return result
-      .append(super.unmap())
-  }
+  case Unread = "unread", Read = "read"
 }

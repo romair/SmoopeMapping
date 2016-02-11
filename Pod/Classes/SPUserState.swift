@@ -16,33 +16,7 @@
 
 import Foundation
 
-public class PagedList<T: Mappable>: Base {
+public enum SPUserState: String {
   
-  private var page: Page
-  
-  public var content: [T] = []
-  
-  public required init(data: Dictionary<String, AnyObject>) {
-    self.page = Page(data: data["page"] as! Dictionary<String, AnyObject>)
-    
-    super.init(data: data)
-  }
-  
-  public var size: Int {
-    get {
-      return page.size
-    }
-  }
-  
-  public var totalPages: Int {
-    get {
-      return page.totalPages
-    }
-  }
-  
-  public var totalElements: Int {
-    get {
-      return page.totalElements
-    }
-  }
+  case Disconnected = "disconnected", Blocked = "blocked", Unverified = "unverified", Admin = "admin"
 }

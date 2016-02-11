@@ -16,23 +16,14 @@
 
 import Foundation
 
-public class GeoLocation: Mappable {
+public class SPSmartConnectList: SPPagedList<SPSmartConnect> {
   
-  public var latitude: Double
-  
-  public var longitude: Double
-  
-  init(latitude: Double, longitude: Double) {
-    self.latitude = latitude
-    self.longitude = longitude
-  }
-  
-  public required init(data: Dictionary<String, AnyObject>) {
-    self.latitude = data["latitude"]!.doubleValue
-    self.longitude = data["longitude"]!.doubleValue
-  }
-  
-  public func unmap() -> Dictionary<String, AnyObject> {
-    return ["latitude": latitude, "longitude": longitude]
+  public required init(data: [String: AnyObject]) {
+    super.init(data: data)
+    
+    self.content = (data["_embedded"]!["smartConnects"] as! [AnyObject])
+      .map { v in
+        SPSmartConnect(data: v as! [String: AnyObject])
+    }
   }
 }

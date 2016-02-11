@@ -16,14 +16,20 @@
 
 import Foundation
 
-public class MessageList: PagedList<Message> {
+public class SPCreated: SPIdentified {
   
-  public required init(data: Dictionary<String, AnyObject>) {
-    super.init(data: data)
+  public private(set) var created: NSDate
+  
+  public required init(data: [String: AnyObject]) {
+    self.created = NSDate.fromISO8601String(data["created"] as! String)
     
-    self.content = (data["_embedded"]!["messages"] as! [AnyObject])
-      .map { v in
-        Message(data: v as! Dictionary<String, AnyObject>)
-    }
+    super.init(data: data)
+  }
+  
+  public override func unmap() -> [String: AnyObject] {
+    var result: Dictionary<String, AnyObject> = ["created": created.toISO8601String()]
+    
+    return result
+      .append(super.unmap())
   }
 }

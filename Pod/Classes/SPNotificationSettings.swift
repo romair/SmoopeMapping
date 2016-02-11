@@ -16,7 +16,7 @@
 
 import Foundation
 
-public class NotificationSettings: Base {
+public class SPNotificationSettings: SPBase {
   
   public enum Target: String {
     
@@ -28,28 +28,28 @@ public class NotificationSettings: Base {
     case NewChat = "newChat", NewMessage = "newMessage"
   }
   
-  public var settings: Dictionary<Target, [Event]>
+  public var settings: [Target: [Event]]
   
-  public required init(data: Dictionary<String, AnyObject>) {
+  public required init(data: [String: AnyObject]) {
     self.settings = [:]
     
     super.init(data: data)
     
     if let settings = data["settings"] {
-      (settings as! Dictionary<String, [String]>)
+      (settings as! [String: [String]])
         .forEach { target, events in
           self.settings[Target(rawValue: target)!] = events.map({ event in Event(rawValue: event)! })
         }
     }
   }
   
-  public override func unmap() -> Dictionary<String, AnyObject> {
-    var set: Dictionary<String, AnyObject> = [:]
+  public override func unmap() -> [String: AnyObject] {
+    var set: [String: AnyObject] = [:]
     settings.forEach { target, events in
       set[target.rawValue] = (events as [Event]).map({ event in event.rawValue })
     }
     
-    var result: Dictionary<String, AnyObject> = ["settings": set]
+    var result: [String: AnyObject] = ["settings": set]
     return result
       .append(super.unmap())
   }

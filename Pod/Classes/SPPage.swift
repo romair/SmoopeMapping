@@ -16,14 +16,20 @@
 
 import Foundation
 
-public class BusinessList: PagedList<Business> {
+public class SPPage: SPMappable {
+  
+  public private(set) var size: Int
+  
+  public private(set) var totalElements: Int
+  
+  public private(set) var totalPages: Int
+  
+  public private(set) var number: Int
   
   public required init(data: Dictionary<String, AnyObject>) {
-    super.init(data: data)
-    
-    self.content = (data["_embedded"]!["businesses"] as! [AnyObject])
-      .map { v in
-        Business(data: v as! Dictionary<String, AnyObject>)
-    }
+    self.size = data["size"] as! Int
+    self.totalElements = data["totalElements"] as! Int
+    self.totalPages = data["totalPages"] as! Int
+    self.number = data["number"] as! Int
   }
 }

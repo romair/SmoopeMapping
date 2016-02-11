@@ -16,20 +16,7 @@
 
 import Foundation
 
-public class Identified: Base {
+public protocol SPUnmappable {
   
-  public private(set) var id: String
-  
-  public required init(data: Dictionary<String, AnyObject>) {
-    self.id = data["id"] as! String
-    
-    super.init(data: data)
-  }
-  
-  public override func unmap() -> Dictionary<String, AnyObject> {
-    var result: Dictionary<String, AnyObject> = ["id": id]
-    
-    return result
-      .append(super.unmap())
-  }
+  func unmap() -> Dictionary<String, AnyObject>
 }

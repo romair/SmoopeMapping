@@ -16,28 +16,28 @@
 
 import Foundation
 
-public class Message: Created {
+public class SPMessage: SPCreated {
   
-  public private(set) var states: [MessageState] = []
+  public private(set) var states: [SPMessageState] = []
   
-  public var parts: [MessagePart] = []
+  public var parts: [Part] = []
   
-  public required init(data: Dictionary<String, AnyObject>) {
-    if let states = data["status"] {
-      self.states = (states as! [String]).map({ s in MessageState(rawValue: s)!})
+  public required init(data: [String: AnyObject]) {
+    if let states = data["status"] as? [String] {
+      self.states = states.map({ s in SPMessageState(rawValue: s)!})
     }
-    if let parts = data["_embedded"]!["parts"] {
-      self.parts = (parts as! [AnyObject])
+    if let parts = data["_embedded"]!["parts"] as? [AnyObject] {
+      self.parts = parts
         .map { v in
-          MessagePart(data: v as! Dictionary<String, AnyObject>)
+          Part(data: v as! [String: AnyObject])
         }
     }
     
     super.init(data: data)
   }
   
-  public override func unmap() -> Dictionary<String, AnyObject> {
-    var result: Dictionary<String, AnyObject> = [:]
+  public override func unmap() -> [String: AnyObject] {
+    var result: [String: AnyObject] = [:]
     if !states.isEmpty {
       result["states"] = states.map({ i in i.rawValue })
     }
@@ -49,7 +49,7 @@ public class Message: Created {
       .append(super.unmap())
   }
   
-  public class MessagePart: Base {
+  public class Part: SPBase {
     
     private var mimeType: String?
     
@@ -78,8 +78,8 @@ public class Message: Created {
       super.init(data: data)
     }
     
-    public override func unmap() -> Dictionary<String, AnyObject> {
-      var result: Dictionary<String, AnyObject> = [:]
+    public override func unmap() -> [String: AnyObject] {
+      var result: [String: AnyObject] = [:]
       if let mimeType = self.mimeType {
         result["mimeType"] = mimeType
       }

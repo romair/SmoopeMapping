@@ -16,7 +16,14 @@
 
 import Foundation
 
-public enum ConversationState: String {
+public class SPBusinessList: SPPagedList<SPBusiness> {
   
-  case Hidden = "hidden", Starred = "starred", Typing = "typing", Blocked = "blocked"
+  public required init(data: [String: AnyObject]) {
+    super.init(data: data)
+    
+    self.content = (data["_embedded"]!["businesses"] as! [AnyObject])
+      .map { v in
+        SPBusiness(data: v as! [String: AnyObject])
+    }
+  }
 }

@@ -16,18 +16,18 @@
 
 import Foundation
 
-public class Link: Mappable, Unmappable {
+public class SPLink: SPMappable, SPUnmappable {
   
   var href: String
   
   var templated: Bool
   
-  public required init(data: Dictionary<String, AnyObject>) {
+  public required init(data: [String: AnyObject]) {
     self.href = data["href"] as! String
     self.templated = data.get("templated", defaultValue: false).boolValue
   }
   
-  public func unmap() -> Dictionary<String, AnyObject> {
+  public func unmap() -> [String: AnyObject] {
     return ["href": href, "templated": templated]
   }
 }

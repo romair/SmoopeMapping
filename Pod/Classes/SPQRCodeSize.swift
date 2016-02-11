@@ -16,14 +16,7 @@
 
 import Foundation
 
-public class ConversationList: PagedList<Conversation> {
+public enum SPQRCodeSize: Int {
   
-  public required init(data: Dictionary<String, AnyObject>) {
-    super.init(data: data)
-    
-    self.content = (data["_embedded"]!["conversations"] as! [AnyObject])
-      .map { v in
-        Conversation(data: v as! Dictionary<String, AnyObject>)
-    }
-  }
+  case _80 = 80, _200 = 200, _800 = 800
 }

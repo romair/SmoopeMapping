@@ -16,7 +16,7 @@
 
 import Foundation
 
-public protocol Unmappable {
+public enum SPBusinessState: String {
   
-  func unmap() -> Dictionary<String, AnyObject>
+  case Blocked = "blocked", Deleted = "deleted", Hidden = "hidden", Online = "online"
 }

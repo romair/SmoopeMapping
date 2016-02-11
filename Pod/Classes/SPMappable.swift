@@ -16,20 +16,7 @@
 
 import Foundation
 
-public class Page: Mappable {
+public protocol SPMappable {
   
-  public private(set) var size: Int
-  
-  public private(set) var totalElements: Int
-  
-  public private(set) var totalPages: Int
-  
-  public private(set) var number: Int
-  
-  public required init(data: Dictionary<String, AnyObject>) {
-    self.size = data["size"] as! Int
-    self.totalElements = data["totalElements"] as! Int
-    self.totalPages = data["totalPages"] as! Int
-    self.number = data["number"] as! Int
-  }
+  init(data: Dictionary<String, AnyObject>)
 }

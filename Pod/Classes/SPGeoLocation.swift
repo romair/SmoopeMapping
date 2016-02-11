@@ -16,7 +16,23 @@
 
 import Foundation
 
-public enum UserState: String {
+public class SPGeoLocation: SPMappable {
   
-  case Disconnected = "disconnected", Blocked = "blocked", Unverified = "unverified", Admin = "admin"
+  public var latitude: Double
+  
+  public var longitude: Double
+  
+  init(latitude: Double, longitude: Double) {
+    self.latitude = latitude
+    self.longitude = longitude
+  }
+  
+  public required init(data: [String: AnyObject]) {
+    self.latitude = data["latitude"]!.doubleValue
+    self.longitude = data["longitude"]!.doubleValue
+  }
+  
+  public func unmap() -> [String: AnyObject] {
+    return ["latitude": latitude, "longitude": longitude]
+  }
 }

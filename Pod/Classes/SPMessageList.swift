@@ -16,9 +16,14 @@
 
 import Foundation
 
-public class UserInfo: Base {
+public class SPMessageList: SPPagedList<SPMessage> {
   
-  public required init(data: Dictionary<String, AnyObject>) {
+  public required init(data: [String: AnyObject]) {
     super.init(data: data)
+    
+    self.content = (data["_embedded"]!["messages"] as! [AnyObject])
+      .map { v in
+        SPMessage(data: v as! [String: AnyObject])
+    }
   }
 }

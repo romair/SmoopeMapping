@@ -16,7 +16,7 @@
 
 import Foundation
 
-public enum MessageState: String {
+public enum SPConversationState: String {
   
-  case Unread = "unread", Read = "read"
+  case Hidden = "hidden", Starred = "starred", Typing = "typing", Blocked = "blocked"
 }

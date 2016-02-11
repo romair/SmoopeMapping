@@ -16,7 +16,14 @@
 
 import Foundation
 
-public enum BusinessState: String {
+public class SPUserList: SPPagedList<SPUser> {
   
-  case Blocked = "blocked", Deleted = "deleted", Hidden = "hidden", Online = "online"
+  public required init(data: [String: AnyObject]) {
+    super.init(data: data)
+    
+    self.content = (data["_embedded"]!["users"] as! [AnyObject])
+      .map { v in
+        SPUser(data: v as! [String: AnyObject])
+    }
+  }
 }

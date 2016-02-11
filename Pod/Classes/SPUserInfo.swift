@@ -16,14 +16,9 @@
 
 import Foundation
 
-public class UserList: PagedList<User> {
+public class SPUserInfo: SPBase {
   
-  public required init(data: Dictionary<String, AnyObject>) {
+  public required init(data: [String: AnyObject]) {
     super.init(data: data)
-    
-    self.content = (data["_embedded"]!["users"] as! [AnyObject])
-      .map { v in
-        User(data: v as! Dictionary<String, AnyObject>)
-    }
   }
 }

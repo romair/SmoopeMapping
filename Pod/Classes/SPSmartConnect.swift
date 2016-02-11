@@ -16,22 +16,25 @@
 
 import Foundation
 
-public class User: Identified {
+public class SPSmartConnect: SPIdentified {
   
-  public private(set) var states: [UserState] = []
+  public var key: String
   
-  public required init(data: Dictionary<String, AnyObject>) {
-    if let states = data["status"] {
-      self.states = (states as! [String]).map({ s in UserState(rawValue: s)!})
+  public var description: String?
+  
+  public required init(data: [String: AnyObject]) {
+    self.key = data["key"] as! String
+    if let description = data["description"] {
+      self.description = description as? String
     }
     
     super.init(data: data)
   }
   
-  public override func unmap() -> Dictionary<String, AnyObject> {
-    var result: Dictionary<String, AnyObject> = [:]
-    if !states.isEmpty {
-      result["states"] = states.map({ i in i.rawValue })
+  public override func unmap() -> [String: AnyObject] {
+    var result: [String: AnyObject] = ["key": key]
+    if let description = self.description {
+      result["description"] = description
     }
     
     return result

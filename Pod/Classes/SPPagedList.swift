@@ -16,14 +16,33 @@
 
 import Foundation
 
-public class SmartConnectList: PagedList<SmartConnect> {
+public class SPPagedList<T: SPMappable>: SPBase {
   
-  public required init(data: Dictionary<String, AnyObject>) {
-    super.init(data: data)
+  private var page: SPPage
+  
+  public var content: [T] = []
+  
+  public required init(data: [String: AnyObject]) {
+    self.page = SPPage(data: data["page"] as! [String: AnyObject])
     
-    self.content = (data["_embedded"]!["smartConnects"] as! [AnyObject])
-      .map { v in
-        SmartConnect(data: v as! Dictionary<String, AnyObject>)
+    super.init(data: data)
+  }
+  
+  public var size: Int {
+    get {
+      return page.size
+    }
+  }
+  
+  public var totalPages: Int {
+    get {
+      return page.totalPages
+    }
+  }
+  
+  public var totalElements: Int {
+    get {
+      return page.totalElements
     }
   }
 }

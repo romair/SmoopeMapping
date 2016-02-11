@@ -16,24 +16,23 @@
 
 import Foundation
 
-public class Bot: UserInfo {
+public class SPUser: SPIdentified {
   
-  public var displayName: String
+  public private(set) var states: [SPUserState] = []
   
-  public init(displayName: String) {
-      self.displayName = displayName
-      
-      super.init(data: [:])
-  }
-  
-  public required init(data: Dictionary<String, AnyObject>) {
-    self.displayName = data["displayName"] as! String
+  public required init(data: [String: AnyObject]) {
+    if let states = data["status"] as? [String] {
+      self.states = states.map({ s in SPUserState(rawValue: s)!})
+    }
     
     super.init(data: data)
   }
   
-  public override func unmap() -> Dictionary<String, AnyObject> {
-    var result: Dictionary<String, AnyObject> = ["displayName": displayName]
+  public override func unmap() -> [String: AnyObject] {
+    var result: [String: AnyObject] = [:]
+    if !states.isEmpty {
+      result["states"] = states.map({ i in i.rawValue })
+    }
     
     return result
       .append(super.unmap())

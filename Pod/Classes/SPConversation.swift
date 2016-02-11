@@ -16,30 +16,30 @@
 
 import Foundation
 
-public class Conversation: Created {
+public class SPConversation: SPCreated {
   
   public var lastActivity: NSDate?
   
   public var unreadMessages: Int?
   
-  public private(set) var states: [ConversationState] = []
+  public private(set) var states: [SPConversationState] = []
   
-  public required init(data: Dictionary<String, AnyObject>) {
+  public required init(data: [String: AnyObject]) {
     if let lastActivity = data["lastActivity"] {
       self.lastActivity = NSDate.fromISO8601String(lastActivity as! String)
     }
     if let unreadMessages = data["unreadMessages"] {
       self.unreadMessages = unreadMessages as? Int
     }
-    if let states = data["status"] {
-      self.states = (states as! [String]).map({ s in ConversationState(rawValue: s)!})
+    if let states = data["status"] as? [String] {
+      self.states = states.map({ s in SPConversationState(rawValue: s)!})
     }
     
     super.init(data: data)
   }
   
   public override func unmap() -> Dictionary<String, AnyObject> {
-    var result: Dictionary<String, AnyObject> = [:]
+    var result: [String: AnyObject] = [:]
     if let lastActivity = self.lastActivity {
       result["lastActivity"] = lastActivity.toISO8601String()
     }

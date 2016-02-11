@@ -16,7 +16,7 @@
 
 import Foundation
 
-public class Business: Identified {
+public class SPBusiness: SPIdentified {
   
   public var name: String
   
@@ -30,15 +30,15 @@ public class Business: Identified {
   
   public var smsSender: String?
   
-  public var coordinates: GeoLocation?
+  public var coordinates: SPGeoLocation?
   
-  public private(set) var states: [BusinessState] = []
+  public private(set) var states: [SPBusinessState] = []
 
   public var statusMessage: String?
   
   public private(set) var tags: [String] = []
   
-  public required init(data: Dictionary<String, AnyObject>) {
+  public required init(data: [String: AnyObject]) {
     self.name = data["name"] as! String
     if let description = data["description"] {
       self.description = description as? String
@@ -59,19 +59,19 @@ public class Business: Identified {
       self.statusMessage = statusMessage as? String
     }
     if let coordinates = data["coordinates"] {
-      self.coordinates = GeoLocation(data: coordinates as! Dictionary<String, AnyObject>)
+      self.coordinates = SPGeoLocation(data: coordinates as! Dictionary<String, AnyObject>)
     }
-    if let states = data["status"] {
-      self.states = (states as! [String]).map({ s in BusinessState(rawValue: s)!})
+    if let states = data["status"] as? [String] {
+      self.states = states.map({ s in SPBusinessState(rawValue: s)!})
     }
-    if let tags = data["tags"] {
-      self.tags = tags as! [String]
+    if let tags = data["tags"] as? [String] {
+      self.tags = tags
     }
     
     super.init(data: data)
   }
   
-  public override func unmap() -> Dictionary<String, AnyObject> {
+  public override func unmap() -> [String: AnyObject] {
     var result: Dictionary<String, AnyObject> = ["name": name]
     if let description = self.description {
       result["description"] = description

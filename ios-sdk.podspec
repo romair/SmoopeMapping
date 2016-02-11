@@ -7,7 +7,7 @@
 #
 
 Pod::Spec.new do |s|
-  s.name             = "ios-sdk"
+  s.name             = "SmoopeSDK"
   s.version          = "1.0.0-SNAPSHOT"
   s.summary          = "Swift implementation of smoope RESTful API."
 
@@ -17,6 +17,7 @@ Pod::Spec.new do |s|
 #   * Write the description between the DESC delimiters below.
 #   * Finally, don't worry about the indent, CocoaPods strips it!  
   s.description      = <<-DESC
+Swift implementation of smoope RESTful API.
                        DESC
 
   s.homepage         = "https://github.com/smoope/ios-sdk"

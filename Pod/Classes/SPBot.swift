@@ -16,7 +16,26 @@
 
 import Foundation
 
-public protocol Mappable {
+public class SPBot: SPUserInfo {
   
-  init(data: Dictionary<String, AnyObject>)
+  public var displayName: String
+  
+  public init(displayName: String) {
+      self.displayName = displayName
+      
+      super.init(data: [:])
+  }
+  
+  public required init(data: [String: AnyObject]) {
+    self.displayName = data["displayName"] as! String
+    
+    super.init(data: data)
+  }
+  
+  public override func unmap() -> [String: AnyObject] {
+    var result: [String: AnyObject] = ["displayName": displayName]
+    
+    return result
+      .append(super.unmap())
+  }
 }
