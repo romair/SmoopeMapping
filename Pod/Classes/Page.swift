@@ -14,22 +14,22 @@
 * limitations under the License.
 */
 
-import XCTest
-import ios_sdk
+import Foundation
 
-class UserTests: BaseTests {
+public class Page: Mappable {
   
-  func testSingle() {
-    let resource = getResource("user")
-    let result = User(data: resource)
-    
-    XCTAssertNotNil(result, "Mapped object shouldn't be nil")
-    XCTAssertEqual(result.id, resource["id"] as? String)
-    XCTAssert(result.states.count == 1)
-    XCTAssert(result.links.count == 7)
-  }
+  public private(set) var size: Int
   
-  func testCollection() {
-    testCollection(UserList(data: getResource("users")))
+  public private(set) var totalElements: Int
+  
+  public private(set) var totalPages: Int
+  
+  public private(set) var number: Int
+  
+  public required init(data: Dictionary<String, AnyObject>) {
+    self.size = data["size"] as! Int
+    self.totalElements = data["totalElements"] as! Int
+    self.totalPages = data["totalPages"] as! Int
+    self.number = data["number"] as! Int
   }
 }

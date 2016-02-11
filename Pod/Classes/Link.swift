@@ -16,7 +16,7 @@
 
 import Foundation
 
-public class Link: Mappable {
+public class Link: Mappable, Unmappable {
   
   var href: String
   

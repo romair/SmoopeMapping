@@ -19,6 +19,4 @@ import Foundation
 public protocol Mappable {
   
   init(data: Dictionary<String, AnyObject>)
-  
-  func unmap() -> Dictionary<String, AnyObject>
 }

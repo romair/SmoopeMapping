@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		034447C81C6CC7B000363454 /* users.json in Resources */ = {isa = PBXBuildFile; fileRef = 034447C61C6CC6DB00363454 /* users.json */; };
+		034447D01C6CCBBB00363454 /* smartConnects.json in Resources */ = {isa = PBXBuildFile; fileRef = 034447CF1C6CCBBB00363454 /* smartConnects.json */; };
+		034447D21C6CCD3F00363454 /* businesses.json in Resources */ = {isa = PBXBuildFile; fileRef = 034447D11C6CCD3F00363454 /* businesses.json */; };
+		034447D41C6CCE0200363454 /* conversations.json in Resources */ = {isa = PBXBuildFile; fileRef = 034447D31C6CCE0200363454 /* conversations.json */; };
 		03D8F24A1C6C618200EB3425 /* business.json in Resources */ = {isa = PBXBuildFile; fileRef = 03D8F2431C6C614D00EB3425 /* business.json */; };
 		03D8F24B1C6C618500EB3425 /* BusinessTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03D8F2441C6C614D00EB3425 /* BusinessTests.swift */; };
 		03D8F24F1C6C63E500EB3425 /* BaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03D8F24E1C6C63E500EB3425 /* BaseTests.swift */; };
@@ -43,6 +47,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		034447C61C6CC6DB00363454 /* users.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = users.json; sourceTree = "<group>"; };
+		034447CF1C6CCBBB00363454 /* smartConnects.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = smartConnects.json; sourceTree = "<group>"; };
+		034447D11C6CCD3F00363454 /* businesses.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = businesses.json; sourceTree = "<group>"; };
+		034447D31C6CCE0200363454 /* conversations.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = conversations.json; sourceTree = "<group>"; };
 		03D8F2431C6C614D00EB3425 /* business.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = business.json; sourceTree = "<group>"; };
 		03D8F2441C6C614D00EB3425 /* BusinessTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BusinessTests.swift; sourceTree = "<group>"; };
 		03D8F24C1C6C633E00EB3425 /* ios_sdk.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ios_sdk.framework; path = "Pods/../build/Debug-iphoneos/ios_sdk.framework"; sourceTree = "<group>"; };
@@ -109,6 +117,10 @@
 				03D8F2761C6C919100EB3425 /* bot.json */,
 				03D8F27C1C6CA28D00EB3425 /* person.json */,
 				03D8F2821C6CAFFF00EB3425 /* notificationSettings.json */,
+				034447C61C6CC6DB00363454 /* users.json */,
+				034447CF1C6CCBBB00363454 /* smartConnects.json */,
+				034447D11C6CCD3F00363454 /* businesses.json */,
+				034447D31C6CCE0200363454 /* conversations.json */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -314,8 +326,12 @@
 				03D8F27D1C6CA28D00EB3425 /* person.json in Resources */,
 				03D8F26B1C6C8E7200EB3425 /* user.json in Resources */,
 				03D8F2601C6C868300EB3425 /* conversation.json in Resources */,
+				034447C81C6CC7B000363454 /* users.json in Resources */,
+				034447D41C6CCE0200363454 /* conversations.json in Resources */,
+				034447D21C6CCD3F00363454 /* businesses.json in Resources */,
 				03D8F26F1C6C8FA000EB3425 /* smartConnect.json in Resources */,
 				03D8F2771C6C919100EB3425 /* bot.json in Resources */,
+				034447D01C6CCBBB00363454 /* smartConnects.json in Resources */,
 				03D8F24A1C6C618200EB3425 /* business.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

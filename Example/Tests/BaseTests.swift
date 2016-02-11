@@ -16,6 +16,7 @@
 
 import XCTest
 import SwiftyJSON
+import ios_sdk
 
 class BaseTests: XCTestCase {
     
@@ -23,5 +24,14 @@ class BaseTests: XCTestCase {
     let path = NSBundle(forClass: self.dynamicType).pathForResource(file, ofType: "json")
     let jsonData = NSData(contentsOfFile:path!)
     return JSON(data: jsonData!).dictionaryObject!
+  }
+  
+  func testCollection<T>(collection: PagedList<T>) {
+    XCTAssertNotNil(collection, "Mapped object shouldn't be nil")
+    XCTAssert(collection.content.count == 2)
+    XCTAssert(collection.size == 2)
+    XCTAssert(collection.totalElements == 4)
+    XCTAssert(collection.totalPages == 2)
+    XCTAssert(collection.links.count == 4)
   }
 }

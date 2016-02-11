@@ -16,7 +16,7 @@
 
 import Foundation
 
-public class Base {
+public class Base: Mappable, Unmappable {
   
   public var links: Dictionary<String, Link>
   

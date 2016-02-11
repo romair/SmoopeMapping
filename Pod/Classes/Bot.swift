@@ -20,6 +20,12 @@ public class Bot: UserInfo {
   
   public var displayName: String
   
+  public init(displayName: String) {
+      self.displayName = displayName
+      
+      super.init(data: [:])
+  }
+  
   public required init(data: Dictionary<String, AnyObject>) {
     self.displayName = data["displayName"] as! String
     

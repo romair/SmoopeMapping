@@ -28,6 +28,17 @@ public class Person: UserInfo {
   
   public var telephone: String?
   
+  public init(givenName: String, familyName: String, birthDate: NSDate?,
+    email: String?, telephone: String?) {
+    self.givenName = givenName
+    self.familyName = familyName
+    self.birthDate = birthDate
+    self.email = email
+    self.telephone = telephone
+    
+    super.init(data: [:])
+  }
+  
   public required init(data: Dictionary<String, AnyObject>) {
     self.givenName = data["givenName"] as! String
     self.familyName = data["familyName"] as! String

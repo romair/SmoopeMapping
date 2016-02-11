@@ -14,22 +14,9 @@
 * limitations under the License.
 */
 
-import XCTest
-import ios_sdk
+import Foundation
 
-class UserTests: BaseTests {
+public protocol Unmappable {
   
-  func testSingle() {
-    let resource = getResource("user")
-    let result = User(data: resource)
-    
-    XCTAssertNotNil(result, "Mapped object shouldn't be nil")
-    XCTAssertEqual(result.id, resource["id"] as? String)
-    XCTAssert(result.states.count == 1)
-    XCTAssert(result.links.count == 7)
-  }
-  
-  func testCollection() {
-    testCollection(UserList(data: getResource("users")))
-  }
+  func unmap() -> Dictionary<String, AnyObject>
 }

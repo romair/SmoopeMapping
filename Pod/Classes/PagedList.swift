@@ -14,22 +14,35 @@
 * limitations under the License.
 */
 
-import XCTest
-import ios_sdk
+import Foundation
 
-class UserTests: BaseTests {
+public class PagedList<T: Mappable>: Base {
   
-  func testSingle() {
-    let resource = getResource("user")
-    let result = User(data: resource)
+  private var page: Page
+  
+  public var content: [T] = []
+  
+  public required init(data: Dictionary<String, AnyObject>) {
+    self.page = Page(data: data["page"] as! Dictionary<String, AnyObject>)
     
-    XCTAssertNotNil(result, "Mapped object shouldn't be nil")
-    XCTAssertEqual(result.id, resource["id"] as? String)
-    XCTAssert(result.states.count == 1)
-    XCTAssert(result.links.count == 7)
+    super.init(data: data)
   }
   
-  func testCollection() {
-    testCollection(UserList(data: getResource("users")))
+  public var size: Int {
+    get {
+      return page.size
+    }
+  }
+  
+  public var totalPages: Int {
+    get {
+      return page.totalPages
+    }
+  }
+  
+  public var totalElements: Int {
+    get {
+      return page.totalElements
+    }
   }
 }

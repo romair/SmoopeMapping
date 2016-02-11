@@ -40,4 +40,8 @@ class BusinessTests: BaseTests {
     XCTAssert(result.tags.count == 1)
     XCTAssert(result.links.count == 8)
   }
+  
+  func testCollection() {
+    testCollection(BusinessList(data: getResource("businesses")))
+  }
 }

@@ -31,4 +31,8 @@ class ConversationTests: BaseTests {
     XCTAssert(result.states.count == 2)
     XCTAssert(result.links.count == 6)
   }
+  
+  func testCollection() {
+    testCollection(ConversationList(data: getResource("conversations")))
+  }
 }

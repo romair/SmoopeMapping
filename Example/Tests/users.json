@@ -1,0 +1,86 @@
+{
+  "_embedded": {
+    "users": [
+              {
+              "status": [
+                         "admin"
+                         ],
+              "_links": {
+              "self": {
+              "href": "http://rest.api/users/user-id"
+              },
+              "person": {
+              "href": "http://rest.api/persons/user-id"
+              },
+              "media": {
+              "href": "http://rest.api/media/user/user-id{?width,height}",
+              "templated": true
+              },
+              "notifications": {
+              "href": "http://rest.api/notifications/user-id"
+              },
+              "business": {
+              "href": "http://rest.api/businesses/business-id"
+              },
+              "meta": {
+              "href": "http://rest.api/meta/user-id"
+              },
+              "webhooks": {
+              "href": "http://rest.api/_internal/webhooks/user/user-id{?page,size,sort}",
+              "templated": true
+              }
+              },
+              "id": "user-id"
+              },
+              {
+              "status": [],
+              "_links": {
+              "self": {
+              "href": "http://rest.api/users/user-id"
+              },
+              "person": {
+              "href": "http://rest.api/persons/user-id"
+              },
+              "media": {
+              "href": "http://rest.api/media/default/user/user-id{?width,height}",
+              "templated": true
+              },
+              "notifications": {
+              "href": "http://rest.api/notifications/user-id"
+              },
+              "business": {
+              "href": "http://rest.api/businesses/business-id"
+              },
+              "meta": {
+              "href": "http://rest.api/meta/user-id"
+              },
+              "webhooks": {
+              "href": "http://rest.api/_internal/webhooks/user/user-id{?page,size,sort}",
+              "templated": true
+              }
+              },
+              "id": "user-id"
+              }
+              ]
+  },
+  "_links": {
+    "first": {
+      "href": "http://rest.api/users/staff/business?page=0&size=2"
+    },
+    "self": {
+      "href": "http://rest.api/users/staff/business?size=2"
+    },
+    "next": {
+      "href": "http://rest.api/users/staff/business?page=1&size=2"
+    },
+    "last": {
+      "href": "http://rest.api/users/staff/business?page=2&size=2"
+    }
+  },
+  "page": {
+    "size": 2,
+    "totalElements": 4,
+    "totalPages": 2,
+    "number": 0
+  }
+}

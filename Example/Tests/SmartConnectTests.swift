@@ -29,4 +29,8 @@ class SmartConnectTests: BaseTests {
     XCTAssertEqual(result.description, resource["description"] as? String)
     XCTAssert(result.links.count == 3)
   }
+  
+  func testCollection() {
+    testCollection(SmartConnectList(data: getResource("smartConnects")))
+  }
 }

@@ -1,0 +1,88 @@
+{
+  "_embedded":{
+    "conversations":[
+                     {
+                     "created":"2015-12-08T09:38:25.755Z",
+                     "lastActivity":"2016-01-30T06:00:33.525Z",
+                     "unreadMessages":0,
+                     "status":[
+                               "starred"
+                               ],
+                     "_links":{
+                     "self":{
+                     "href":"http://rest.api/chats/conversation-id"
+                     },
+                     "user":{
+                     "href":"http://rest.api/users/user-id"
+                     },
+                     "business":{
+                     "href":"http://rest.api/businesses/business-id"
+                     },
+                     "messages":{
+                     "href":"http://rest.api/messages?chat=conversation-id{&page,size,sort,after,before}",
+                     "templated":true
+                     },
+                     "attachments":{
+                     "href":"http://rest.api/media/chat/conversation-id"
+                     },
+                     "typing":{
+                     "href":"http://rest.api/chats/conversation-id/typing"
+                     }
+                     },
+                     "id":"conversation-id"
+                     },
+                     {
+                     "created":"2015-11-12T13:20:11.693Z",
+                     "lastActivity":"2015-12-08T11:06:27.808Z",
+                     "unreadMessages":0,
+                     "status":[
+                               "blocked",
+                               "starred"
+                               ],
+                     "_links":{
+                     "self":{
+                     "href":"http://rest.api/chats/conversation-id"
+                     },
+                     "user":{
+                     "href":"http://rest.api/users/user-id"
+                     },
+                     "business":{
+                     "href":"http://rest.api/businesses/business-id"
+                     },
+                     "messages":{
+                     "href":"http://rest.api/messages?chat=conversation-id{&page,size,sort,after,before}",
+                     "templated":true
+                     },
+                     "attachments":{
+                     "href":"http://rest.api/media/chat/conversation-id"
+                     },
+                     "typing":{
+                     "href":"http://rest.api/chats/conversation-id/typing"
+                     }
+                     },
+                     "id":"conversation-id"
+                     }
+                     ]
+  },
+  "_links":{
+    "first": {
+      "href": "http://rest.api/chats?filter=all&page=0&size=2&sort=created,desc"
+    },
+    "self": {
+      "href": "http://rest.api/chats?filter=all"
+    },
+    "next": {
+      "href": "http://rest.api/chats?filter=all&page=1&size=2&sort=created,desc"
+    },
+    "last": {
+      "href": "http://rest.api/chats?filter=all&page=2&size=2&sort=created,desc"
+    }
+  },
+  "page":{
+    "size":2,
+    "totalElements":4,
+    "totalPages":2,
+    "number":0
+  }
+  
+}

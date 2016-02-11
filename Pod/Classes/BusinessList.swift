@@ -14,22 +14,16 @@
 * limitations under the License.
 */
 
-import XCTest
-import ios_sdk
+import Foundation
 
-class UserTests: BaseTests {
+public class BusinessList: PagedList<Business> {
   
-  func testSingle() {
-    let resource = getResource("user")
-    let result = User(data: resource)
+  public required init(data: Dictionary<String, AnyObject>) {
+    super.init(data: data)
     
-    XCTAssertNotNil(result, "Mapped object shouldn't be nil")
-    XCTAssertEqual(result.id, resource["id"] as? String)
-    XCTAssert(result.states.count == 1)
-    XCTAssert(result.links.count == 7)
-  }
-  
-  func testCollection() {
-    testCollection(UserList(data: getResource("users")))
+    self.content = (data["_embedded"]!["businesses"] as! [AnyObject])
+      .map { v in
+        Business(data: v as! Dictionary<String, AnyObject>)
+    }
   }
 }
