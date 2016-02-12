@@ -3,6 +3,8 @@ use_frameworks!
 
 target 'ios-sdk_Example', :exclusive => true do
   pod 'SmoopeSDK', :path => '../'
+  
+  pod 'SwiftyTraverson', :git => 'https://github.com/smoope/SwiftyTraverson.git'
 end
 
 target 'ios-sdk_Tests', :exclusive => true do
