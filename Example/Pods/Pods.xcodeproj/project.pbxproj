@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		031CD68A1C7213A4002523B4 /* SPInvitation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031CD6891C7213A4002523B4 /* SPInvitation.swift */; };
+		031CD68C1C7213F7002523B4 /* SPInvitationState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031CD68B1C7213F7002523B4 /* SPInvitationState.swift */; };
+		031CD68E1C7214CD002523B4 /* SPInvitationList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031CD68D1C7214CD002523B4 /* SPInvitationList.swift */; };
 		04E435CDBB2CACFFD6FB60C011CF1090 /* SPGeoLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39DA841F321821F0EFF6A573394C7321 /* SPGeoLocation.swift */; };
 		095406039B4D371E48D08B38A2975AC8 /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6B4464809049BBF55A940B1ECA0916C /* Error.swift */; };
 		0D88F2E713D2043789AF2D89A227D769 /* SPBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB35CFCC841CC44EC8F975611B6E80D6 /* SPBase.swift */; };
@@ -183,6 +186,9 @@
 
 /* Begin PBXFileReference section */
 		013F6D1C86E377208F83B679F92427FC /* SPBusinessList.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SPBusinessList.swift; sourceTree = "<group>"; };
+		031CD6891C7213A4002523B4 /* SPInvitation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPInvitation.swift; sourceTree = "<group>"; };
+		031CD68B1C7213F7002523B4 /* SPInvitationState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPInvitationState.swift; sourceTree = "<group>"; };
+		031CD68D1C7214CD002523B4 /* SPInvitationList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPInvitationList.swift; sourceTree = "<group>"; };
 		052C574247A4BBDA1D0BB21E8A674F58 /* Alamofire-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Alamofire-dummy.m"; sourceTree = "<group>"; };
 		05F920B33F38B63A01EA89E73438F7B4 /* SwiftyTraverson-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftyTraverson-prefix.pch"; sourceTree = "<group>"; };
 		07F25736B4F533B6BC1FA75EA25439E3 /* ServerTrustPolicy.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ServerTrustPolicy.swift; path = Source/ServerTrustPolicy.swift; sourceTree = "<group>"; };
@@ -431,6 +437,8 @@
 				69E4771F3BEA6F3C0E776EE251E016EE /* SPUser.swift */,
 				322A863E70590D84EBC79194D668C484 /* SPUserInfo.swift */,
 				9710426A535A01C1021480FED2AC9907 /* SPUserState.swift */,
+				031CD6891C7213A4002523B4 /* SPInvitation.swift */,
+				031CD68B1C7213F7002523B4 /* SPInvitationState.swift */,
 			);
 			name = Objects;
 			sourceTree = "<group>";
@@ -445,6 +453,7 @@
 				2A4F04D8E0C264AEE5940F19E4AD90FB /* SPPagedList.swift */,
 				FB2120A216156AD916E543FF53A52689 /* SPSmartConnectList.swift */,
 				4692D6D2D1AD3FC0B4E4D167CE0CAF79 /* SPUserList.swift */,
+				031CD68D1C7214CD002523B4 /* SPInvitationList.swift */,
 			);
 			name = Collections;
 			sourceTree = "<group>";
@@ -1102,11 +1111,14 @@
 				4081EA628AF0B73AC51FFB9D7AB3B89E /* Manager.swift in Sources */,
 				C7B6DD7C0456C50289A2C381DFE9FA3F /* MultipartFormData.swift in Sources */,
 				34CCDCA848A701466256BC2927DA8856 /* NetworkReachabilityManager.swift in Sources */,
+				031CD68C1C7213F7002523B4 /* SPInvitationState.swift in Sources */,
 				BE41196F6A3903E59C3306FE3F8B43FE /* Notifications.swift in Sources */,
 				C0DB70AB368765DC64BFB5FEA75E0696 /* ParameterEncoding.swift in Sources */,
+				031CD68A1C7213A4002523B4 /* SPInvitation.swift in Sources */,
 				EFE92E8D3813DD26E78E93EEAF6D7E7E /* Request.swift in Sources */,
 				62E8346F03C03E7F4D631361F325689E /* Response.swift in Sources */,
 				3EA8F215C9C1432D74E5CCA4834AA8C0 /* ResponseSerialization.swift in Sources */,
+				031CD68E1C7214CD002523B4 /* SPInvitationList.swift in Sources */,
 				AA314156AC500125F4078EE968DB14C6 /* Result.swift in Sources */,
 				7B48852C4D848FA2DA416A98F6425869 /* ServerTrustPolicy.swift in Sources */,
 				AE4CF87C02C042DF13ED5B21C4FDC1E0 /* Stream.swift in Sources */,

@@ -1,0 +1,13 @@
+{
+  "telephone": "+4999912349876",
+  "status": [
+             "pending"
+             ],
+  "lastActivity": "2016-02-15T14:08:19.528Z",
+  "_links": {
+    "self": {
+      "href": "http://rest.api/_internal/invitations/invitation-id"
+    }
+  },
+  "id": "invitation-id"
+}
