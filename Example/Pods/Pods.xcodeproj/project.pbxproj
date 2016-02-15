@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		031CD68A1C7213A4002523B4 /* SPInvitation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031CD6891C7213A4002523B4 /* SPInvitation.swift */; };
-		031CD68C1C7213F7002523B4 /* SPInvitationState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031CD68B1C7213F7002523B4 /* SPInvitationState.swift */; };
-		031CD68E1C7214CD002523B4 /* SPInvitationList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031CD68D1C7214CD002523B4 /* SPInvitationList.swift */; };
+		031CD6971C721655002523B4 /* SPInvitation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031CD6891C7213A4002523B4 /* SPInvitation.swift */; };
+		031CD6981C721658002523B4 /* SPInvitationState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031CD68B1C7213F7002523B4 /* SPInvitationState.swift */; };
+		031CD6991C72167A002523B4 /* SPInvitationList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031CD68D1C7214CD002523B4 /* SPInvitationList.swift */; };
 		04E435CDBB2CACFFD6FB60C011CF1090 /* SPGeoLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39DA841F321821F0EFF6A573394C7321 /* SPGeoLocation.swift */; };
 		095406039B4D371E48D08B38A2975AC8 /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6B4464809049BBF55A940B1ECA0916C /* Error.swift */; };
 		0D88F2E713D2043789AF2D89A227D769 /* SPBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB35CFCC841CC44EC8F975611B6E80D6 /* SPBase.swift */; };
@@ -1071,14 +1071,17 @@
 				4232A8CDE79DC6E07A42EE73C75B91EE /* SPConversationState.swift in Sources */,
 				7CF2AF8442674DD243564E006DD3DE9B /* SPCreated.swift in Sources */,
 				04E435CDBB2CACFFD6FB60C011CF1090 /* SPGeoLocation.swift in Sources */,
+				031CD6991C72167A002523B4 /* SPInvitationList.swift in Sources */,
 				C1DD20402E3B5B9A8D2894F3CDDC1A6F /* SPIdentified.swift in Sources */,
 				65D849FC3D70F8D7BE1AEF7FF56044D8 /* SPLink.swift in Sources */,
 				26202AE6D45D7E1B1F57E4EFA7B12766 /* SPMappable.swift in Sources */,
 				B88A03F6C634E37FDE422786B45E827E /* SPMessage.swift in Sources */,
 				C82A241F69A012746A3FF5021966509B /* SPMessageList.swift in Sources */,
 				E66FF4FAC5874B7E22AD350B41269D4C /* SPMessageState.swift in Sources */,
+				031CD6981C721658002523B4 /* SPInvitationState.swift in Sources */,
 				E95610F0C25AEADE51914F89B1DB7AAB /* SPNotificationSettings.swift in Sources */,
 				184A65DA75E838134E455157F41F32FF /* SPPage.swift in Sources */,
+				031CD6971C721655002523B4 /* SPInvitation.swift in Sources */,
 				7D028E6EE28B82F1297BE3470D3116B5 /* SPPagedList.swift in Sources */,
 				44A8D17CBD4D849AA7BF7BF9ACBC960C /* SPPerson.swift in Sources */,
 				6053AF875D02E931573A35E05F0FDF4D /* SPQRCodeSize.swift in Sources */,
@@ -1111,14 +1114,11 @@
 				4081EA628AF0B73AC51FFB9D7AB3B89E /* Manager.swift in Sources */,
 				C7B6DD7C0456C50289A2C381DFE9FA3F /* MultipartFormData.swift in Sources */,
 				34CCDCA848A701466256BC2927DA8856 /* NetworkReachabilityManager.swift in Sources */,
-				031CD68C1C7213F7002523B4 /* SPInvitationState.swift in Sources */,
 				BE41196F6A3903E59C3306FE3F8B43FE /* Notifications.swift in Sources */,
 				C0DB70AB368765DC64BFB5FEA75E0696 /* ParameterEncoding.swift in Sources */,
-				031CD68A1C7213A4002523B4 /* SPInvitation.swift in Sources */,
 				EFE92E8D3813DD26E78E93EEAF6D7E7E /* Request.swift in Sources */,
 				62E8346F03C03E7F4D631361F325689E /* Response.swift in Sources */,
 				3EA8F215C9C1432D74E5CCA4834AA8C0 /* ResponseSerialization.swift in Sources */,
-				031CD68E1C7214CD002523B4 /* SPInvitationList.swift in Sources */,
 				AA314156AC500125F4078EE968DB14C6 /* Result.swift in Sources */,
 				7B48852C4D848FA2DA416A98F6425869 /* ServerTrustPolicy.swift in Sources */,
 				AE4CF87C02C042DF13ED5B21C4FDC1E0 /* Stream.swift in Sources */,
