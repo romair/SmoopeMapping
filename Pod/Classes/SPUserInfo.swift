@@ -18,7 +18,7 @@ import Foundation
 
 public class SPUserInfo: SPBase {
   
-  public required init(data: [String: AnyObject]) {
+  public required init(data: [String: AnyObject] = [:]) {
     super.init(data: data)
   }
 }

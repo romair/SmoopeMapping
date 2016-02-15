@@ -20,7 +20,7 @@ public class SPIdentified: SPBase {
   
   public private(set) var id: String
   
-  public required init(data: [String: AnyObject]) {
+  public required init(data: [String: AnyObject]  = [:]) {
     self.id = data["id"] as! String
     
     super.init(data: data)

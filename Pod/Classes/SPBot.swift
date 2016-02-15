@@ -23,7 +23,7 @@ public class SPBot: SPUserInfo {
   public init(displayName: String) {
       self.displayName = displayName
       
-      super.init(data: [:])
+      super.init()
   }
   
   public required init(data: [String: AnyObject]) {

@@ -22,6 +22,13 @@ public class SPSmartConnect: SPIdentified {
   
   public var description: String?
   
+  public init(key: String, description: String?) {
+    self.key = key
+    self.description = description
+    
+    super.init()
+  }
+  
   public required init(data: [String: AnyObject]) {
     self.key = data["key"] as! String
     if let description = data["description"] {

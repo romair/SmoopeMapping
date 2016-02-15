@@ -36,7 +36,7 @@ public class SPPerson: SPUserInfo {
     self.email = email
     self.telephone = telephone
     
-    super.init(data: [:])
+    super.init()
   }
   
   public required init(data: [String: AnyObject]) {

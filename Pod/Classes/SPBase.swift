@@ -20,7 +20,7 @@ public class SPBase: SPMappable, SPUnmappable {
   
   public var links: [String: SPLink]
   
-  public required init(data: [String: AnyObject]) {
+  public required init(data: [String: AnyObject] = [:]) {
     links = [:]
     data
       .filter() { $0.0 == "_links" }

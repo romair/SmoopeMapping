@@ -51,7 +51,7 @@ public class SPMessage: SPCreated {
   
   public class Part: SPBase {
     
-    private var mimeType: String?
+    private var mimeType: String
     
     private var encoding: String?
     
@@ -61,10 +61,18 @@ public class SPMessage: SPCreated {
     
     private var url: String?
     
+    private init(mimeType: String, encoding: String? = nil, body: String? = nil, filename: String? = nil, url: String? = nil) {
+      self.mimeType = mimeType
+      self.encoding = encoding
+      self.body = body
+      self.filename = filename
+      self.url = url
+      
+      super.init()
+    }
+    
     public required init(data: Dictionary<String, AnyObject>) {
-      if let mimeType = data["mimeType"] {
-        self.mimeType = mimeType as? String
-      }
+      self.mimeType = data["mimeType"] as! String
       if let encoding = data["encoding"] {
         self.encoding = encoding as? String
       }
@@ -79,10 +87,7 @@ public class SPMessage: SPCreated {
     }
     
     public override func unmap() -> [String: AnyObject] {
-      var result: [String: AnyObject] = [:]
-      if let mimeType = self.mimeType {
-        result["mimeType"] = mimeType
-      }
+      var result: [String: AnyObject] = ["mimeType": mimeType]
       if let encoding = self.encoding {
         result["encoding"] = encoding
       }
@@ -98,6 +103,14 @@ public class SPMessage: SPCreated {
       
       return result
         .append(super.unmap())
+    }
+    
+    public static func text(text: String) -> Part {
+      return Part(mimeType: "text/plain", body: text)
+    }
+    
+    public static func media(mimeType: String, filename: String, url: String) -> Part {
+      return Part(mimeType: mimeType, filename: filename, url: url)
     }
   }
 }
