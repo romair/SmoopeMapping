@@ -10,6 +10,7 @@
 		031CD6971C721655002523B4 /* SPInvitation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031CD6891C7213A4002523B4 /* SPInvitation.swift */; };
 		031CD6981C721658002523B4 /* SPInvitationState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031CD68B1C7213F7002523B4 /* SPInvitationState.swift */; };
 		031CD6991C72167A002523B4 /* SPInvitationList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031CD68D1C7214CD002523B4 /* SPInvitationList.swift */; };
+		038A89EE1C7329F100021A65 /* TraversonOAuthAuthenticator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 038A89ED1C7329F100021A65 /* TraversonOAuthAuthenticator.swift */; };
 		04E435CDBB2CACFFD6FB60C011CF1090 /* SPGeoLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39DA841F321821F0EFF6A573394C7321 /* SPGeoLocation.swift */; };
 		095406039B4D371E48D08B38A2975AC8 /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6B4464809049BBF55A940B1ECA0916C /* Error.swift */; };
 		0D88F2E713D2043789AF2D89A227D769 /* SPBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB35CFCC841CC44EC8F975611B6E80D6 /* SPBase.swift */; };
@@ -189,6 +190,7 @@
 		031CD6891C7213A4002523B4 /* SPInvitation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPInvitation.swift; sourceTree = "<group>"; };
 		031CD68B1C7213F7002523B4 /* SPInvitationState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPInvitationState.swift; sourceTree = "<group>"; };
 		031CD68D1C7214CD002523B4 /* SPInvitationList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPInvitationList.swift; sourceTree = "<group>"; };
+		038A89ED1C7329F100021A65 /* TraversonOAuthAuthenticator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TraversonOAuthAuthenticator.swift; sourceTree = "<group>"; };
 		052C574247A4BBDA1D0BB21E8A674F58 /* Alamofire-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Alamofire-dummy.m"; sourceTree = "<group>"; };
 		05F920B33F38B63A01EA89E73438F7B4 /* SwiftyTraverson-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftyTraverson-prefix.pch"; sourceTree = "<group>"; };
 		07F25736B4F533B6BC1FA75EA25439E3 /* ServerTrustPolicy.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ServerTrustPolicy.swift; path = Source/ServerTrustPolicy.swift; sourceTree = "<group>"; };
@@ -469,6 +471,14 @@
 			name = Common;
 			sourceTree = "<group>";
 		};
+		038A89EC1C7329A200021A65 /* Security */ = {
+			isa = PBXGroup;
+			children = (
+				038A89ED1C7329F100021A65 /* TraversonOAuthAuthenticator.swift */,
+			);
+			name = Security;
+			sourceTree = "<group>";
+		};
 		08D82A88120AE8E056E21AF45237D00E /* SwiftyJSON */ = {
 			isa = PBXGroup;
 			children = (
@@ -593,6 +603,7 @@
 		7E204132ACD31AC8480AF9BEF32E9B23 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				038A89EC1C7329A200021A65 /* Security */,
 				FC839D3477195019F6E2D1DEEC321442 /* Dictionary.swift */,
 				895FCCF9964F402559C84FD597328DFD /* NSDate.swift */,
 				034447EB1C6DBA3200363454 /* Objects */,
@@ -1088,6 +1099,7 @@
 				93C7B941D00522767E9FE30B26B1B840 /* SPSmartConnect.swift in Sources */,
 				7E748909F4099ECB9C5C5AEF67285E3C /* SPSmartConnectList.swift in Sources */,
 				D9A227B67D57852A6AB3D436C31D02FF /* SPUnmappable.swift in Sources */,
+				038A89EE1C7329F100021A65 /* TraversonOAuthAuthenticator.swift in Sources */,
 				D1EFD72E7A6314CCBE3230455458D5D8 /* SPUser.swift in Sources */,
 				2398B59B91987351E8DA3B953570EF3D /* SPUserInfo.swift in Sources */,
 				93FC871EAAC8F05C34EDDAF8F0DEAE34 /* SPUserList.swift in Sources */,
