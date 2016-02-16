@@ -40,6 +40,7 @@
 		607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
+		79B89A946F94F10AA17E4967 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0AB0D201D97974F5AABF3AD /* Pods.framework */; };
 		E89D69743F4838A8299CD5E8 /* Pods_ios_sdk_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAAD529B037363473E3FC24B /* Pods_ios_sdk_Example.framework */; };
 /* End PBXBuildFile section */
 
@@ -98,6 +99,7 @@
 		BFBFC9767A9C37EB29F708C2 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		CC1F402118082A26FA064984 /* Pods-ios-sdk_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ios-sdk_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-ios-sdk_Example/Pods-ios-sdk_Example.release.xcconfig"; sourceTree = "<group>"; };
 		EAAD529B037363473E3FC24B /* Pods_ios_sdk_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ios_sdk_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F0AB0D201D97974F5AABF3AD /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E89D69743F4838A8299CD5E8 /* Pods_ios_sdk_Example.framework in Frameworks */,
+				79B89A946F94F10AA17E4967 /* Pods.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -148,6 +151,7 @@
 				03D8F24C1C6C633E00EB3425 /* ios_sdk.framework */,
 				EAAD529B037363473E3FC24B /* Pods_ios_sdk_Example.framework */,
 				651FBBFED78E898193D6D411 /* Pods_ios_sdk_Tests.framework */,
+				F0AB0D201D97974F5AABF3AD /* Pods.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -390,7 +394,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ios-sdk_Example/Pods-ios-sdk_Example-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		44E9D6B65EDED0FA659A2C10 /* Check Pods Manifest.lock */ = {

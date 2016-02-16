@@ -16,14 +16,17 @@
 
 import Foundation
 import SwiftyTraverson
+import Alamofire
 
 public class TraversonOAuthAuthenticator: TraversonAuthenticator {
   
-  private var clientId: String
+  var clientId: String
   
-  private var secret: String
+  var secret: String
   
-  private var url: String
+  var url: String
+  
+  public var retries = 2
   
   public init(url: String, clientId: String, secret: String) {
     self.url = url
@@ -31,7 +34,19 @@ public class TraversonOAuthAuthenticator: TraversonAuthenticator {
     self.secret = secret
   }
   
-  public func authenticate() -> String {
-    return ""
+  public func authenticate(result: TraversonAuthenticatorResult) {
+    Alamofire.request(.POST, url, parameters: ["grant_type": "client_credentials"], encoding: .URL)
+      .authenticate(user: clientId, password: secret)
+      .responseJSON { response in
+        switch response.result {
+        case .Success(let json):
+          let response = json as! NSDictionary
+          result(authorizationHeader: response.objectForKey("access_token") as? String)
+          
+          break
+        default:
+          result(authorizationHeader: nil)
+        }
+    }
   }
 }
