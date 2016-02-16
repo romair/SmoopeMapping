@@ -482,43 +482,83 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0549183EFAA82A46A71C8A3ED6CD8593 /* Classes */ = {
+		038A89EF1C73399100021A65 /* Objects */ = {
 			isa = PBXGroup;
 			children = (
-				D0003C50A0DE9E26EBF09DC21E613D87 /* Dictionary.swift */,
-				FFF896D57B74369250DFED6FF8EBE6D3 /* NSDate.swift */,
-				7B68C3FB43881268BCC78A9E75911BDC /* SPBase.swift */,
 				29E46C104302A48E50CA723468BE53B8 /* SPBot.swift */,
 				C0FFD105F7B7FB2786ABDD874B6B5C3B /* SPBusiness.swift */,
-				528CAA5403E37F3AC890150BE108A541 /* SPBusinessList.swift */,
 				DE0231570BA6F3FB5015DAAF2020F523 /* SPBusinessState.swift */,
 				FB69E9F23362D5C311FFE95988BFECE5 /* SPConversation.swift */,
-				69FE819D0F4C6F8CD93DCBC0AC08AFA6 /* SPConversationList.swift */,
 				9DB6EBE6533D64F59B3DD89EC04BFABE /* SPConversationState.swift */,
-				5BF087B50FE05C3AF57A59E127A08F71 /* SPCreated.swift */,
 				7B010D69C8E60526C40408F4C93BF91A /* SPGeoLocation.swift */,
-				E1031DB1B394F41C52822E9F727558E8 /* SPIdentified.swift */,
 				B83F81E96C7E4E21A9B7456C3575FF86 /* SPInvitation.swift */,
-				605012896B21B0D6DC3CB88BC03726A4 /* SPInvitationList.swift */,
 				601B01566B887B3B9A7505AFA1AAA987 /* SPInvitationState.swift */,
-				F8F0AC2DD3ACE9D5A88457F3DB8F8C3C /* SPLink.swift */,
-				DF224D472D4B161B7E32F8D027A91208 /* SPMappable.swift */,
 				70699995EB4780AF274308DDEECAD4D8 /* SPMessage.swift */,
-				FD62B2EE68F94B39875037C5E55609E1 /* SPMessageList.swift */,
 				76B511B9AD1376E74038E799C507ED0D /* SPMessageState.swift */,
 				872857B1CEBA9C7AE47C8A5D789E37C4 /* SPNotificationSettings.swift */,
-				09A0241EF469525063B715A2ACF87150 /* SPPage.swift */,
-				1B512C3BF28114948F933EAB0BD9DFDD /* SPPagedList.swift */,
 				36B7CC416FCE9A35D961848E4C090C55 /* SPPerson.swift */,
 				DE0FAE415D82A1D86B349839BBDB2762 /* SPQRCodeSize.swift */,
 				93171B4A3CF94C5D95FAF5CE0A0B4266 /* SPSmartConnect.swift */,
-				8BE6FDA837411EFF814342F3F445746E /* SPSmartConnectList.swift */,
-				73D3574F36F4DD43C900646BB38C596F /* SPUnmappable.swift */,
 				32322563C200699DA0087C9AB3A79E35 /* SPUser.swift */,
 				8D396B5AE21C5C8C98A0530A9BF84C80 /* SPUserInfo.swift */,
-				F6EE28184DB45CAAB316DB27A396A166 /* SPUserList.swift */,
 				5F804C31444B3F247DFFCC5BDA795BA8 /* SPUserState.swift */,
+				038A89F11C73399B00021A65 /* Common */,
+				038A89F01C73399600021A65 /* Collections */,
+			);
+			name = Objects;
+			sourceTree = "<group>";
+		};
+		038A89F01C73399600021A65 /* Collections */ = {
+			isa = PBXGroup;
+			children = (
+				528CAA5403E37F3AC890150BE108A541 /* SPBusinessList.swift */,
+				69FE819D0F4C6F8CD93DCBC0AC08AFA6 /* SPConversationList.swift */,
+				605012896B21B0D6DC3CB88BC03726A4 /* SPInvitationList.swift */,
+				FD62B2EE68F94B39875037C5E55609E1 /* SPMessageList.swift */,
+				09A0241EF469525063B715A2ACF87150 /* SPPage.swift */,
+				1B512C3BF28114948F933EAB0BD9DFDD /* SPPagedList.swift */,
+				8BE6FDA837411EFF814342F3F445746E /* SPSmartConnectList.swift */,
+				F6EE28184DB45CAAB316DB27A396A166 /* SPUserList.swift */,
+			);
+			name = Collections;
+			sourceTree = "<group>";
+		};
+		038A89F11C73399B00021A65 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				7B68C3FB43881268BCC78A9E75911BDC /* SPBase.swift */,
+				5BF087B50FE05C3AF57A59E127A08F71 /* SPCreated.swift */,
+				E1031DB1B394F41C52822E9F727558E8 /* SPIdentified.swift */,
+				F8F0AC2DD3ACE9D5A88457F3DB8F8C3C /* SPLink.swift */,
+			);
+			name = Common;
+			sourceTree = "<group>";
+		};
+		038A89F21C73399F00021A65 /* Mapping */ = {
+			isa = PBXGroup;
+			children = (
+				DF224D472D4B161B7E32F8D027A91208 /* SPMappable.swift */,
+				73D3574F36F4DD43C900646BB38C596F /* SPUnmappable.swift */,
+			);
+			name = Mapping;
+			sourceTree = "<group>";
+		};
+		038A89F31C7339A400021A65 /* Security */ = {
+			isa = PBXGroup;
+			children = (
 				F7F45C602F6ABFBEBA5302159F634CD9 /* TraversonOAuthAuthenticator.swift */,
+			);
+			name = Security;
+			sourceTree = "<group>";
+		};
+		0549183EFAA82A46A71C8A3ED6CD8593 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				038A89F31C7339A400021A65 /* Security */,
+				038A89F21C73399F00021A65 /* Mapping */,
+				038A89EF1C73399100021A65 /* Objects */,
+				D0003C50A0DE9E26EBF09DC21E613D87 /* Dictionary.swift */,
+				FFF896D57B74369250DFED6FF8EBE6D3 /* NSDate.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
