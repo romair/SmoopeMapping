@@ -32,4 +32,6 @@ Swift implementation of smoope RESTful API. All the documentation located at Smo
   s.resource_bundles = {
     'ios-sdk' => ['Pod/Assets/*.png']
   }
+
+  s.dependency 'Alamofire', '~> 3.0'
 end
