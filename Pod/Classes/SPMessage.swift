@@ -22,6 +22,12 @@ public class SPMessage: SPCreated {
   
   public var parts: [Part] = []
   
+  public init(parts: [Part]) {
+    self.parts = parts
+    
+    super.init()
+  }
+  
   public required init(data: [String: AnyObject]) {
     if let states = data["status"] as? [String] {
       self.states = states.map({ s in SPMessageState(rawValue: s)!})

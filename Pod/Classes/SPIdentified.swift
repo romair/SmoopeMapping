@@ -18,16 +18,21 @@ import Foundation
 
 public class SPIdentified: SPBase {
   
-  public private(set) var id: String
+  public private(set) var id: String?
   
   public required init(data: [String: AnyObject]  = [:]) {
-    self.id = data["id"] as! String
+    if let id = data["id"] {
+      self.id = id as? String
+    }
     
     super.init(data: data)
   }
   
   public override func unmap() -> [String: AnyObject] {
-    var result: [String: AnyObject] = ["id": id]
+    var result: [String: AnyObject] = [:]
+    if let id = self.id {
+      result["id"] = id
+    }
     
     return result
       .append(super.unmap())

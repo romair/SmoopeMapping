@@ -18,16 +18,21 @@ import Foundation
 
 public class SPCreated: SPIdentified {
   
-  public private(set) var created: NSDate
+  public private(set) var created: NSDate?
   
-  public required init(data: [String: AnyObject]) {
-    self.created = NSDate.fromISO8601String(data["created"] as! String)
+  public required init(data: [String: AnyObject] = [:]) {
+    if let created = data["created"] {
+      self.created = NSDate.fromISO8601String(created as! String)
+    }
     
     super.init(data: data)
   }
   
   public override func unmap() -> [String: AnyObject] {
-    var result: Dictionary<String, AnyObject> = ["created": created.toISO8601String()]
+    var result: Dictionary<String, AnyObject> = [:]
+    if let created = self.created {
+      result["created"] = created.toISO8601String()
+    }
     
     return result
       .append(super.unmap())
