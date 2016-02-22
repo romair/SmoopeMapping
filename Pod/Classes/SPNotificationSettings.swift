@@ -28,7 +28,7 @@ public class SPNotificationSettings: SPBase {
     case NewChat = "newChat", NewMessage = "newMessage"
   }
   
-  public var settings: [Target: [Event]]
+  public var settings: [Target: [Event:Bool]]
   
   public required init(data: [String: AnyObject]) {
     self.settings = [:]
@@ -36,17 +36,33 @@ public class SPNotificationSettings: SPBase {
     super.init(data: data)
     
     if let settings = data["settings"] {
-      (settings as! [String: [String]])
+      (settings as! [String: [String:Bool]])
         .forEach { target, events in
-          self.settings[Target(rawValue: target)!] = events.map({ event in Event(rawValue: event)! })
+          if let t = Target(rawValue: target) {
+            if !self.settings.containKey(t) {
+              self.settings[t] = [:]
+            }
+          
+            events.forEach { event, enabled in
+              if let e = Event(rawValue: event) {
+                self.settings[t]![e] = enabled
+              }
+            }
+          }
         }
     }
   }
   
   public override func unmap() -> [String: AnyObject] {
-    var set: [String: AnyObject] = [:]
+    var set: [String: [String: Bool]] = [:]
     settings.forEach { target, events in
-      set[target.rawValue] = (events as [Event]).map({ event in event.rawValue })
+      if !set.containKey(target.rawValue) {
+        set[target.rawValue] = [:]
+      }
+      
+      events.forEach { event, enabled in
+        set[target.rawValue]![event.rawValue] = enabled
+      }
     }
     
     var result: [String: AnyObject] = ["settings": set]

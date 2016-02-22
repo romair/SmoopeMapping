@@ -18,8 +18,6 @@ import Foundation
 
 public class SPMessage: SPCreated {
   
-  public private(set) var states: [SPMessageState] = []
-  
   public var parts: [Part] = []
   
   public init(parts: [Part]) {
@@ -29,9 +27,6 @@ public class SPMessage: SPCreated {
   }
   
   public required init(data: [String: AnyObject]) {
-    if let states = data["status"] as? [String] {
-      self.states = states.map({ s in SPMessageState(rawValue: s)!})
-    }
     if let parts = data["_embedded"]!["parts"] as? [AnyObject] {
       self.parts = parts
         .map { v in
@@ -44,9 +39,6 @@ public class SPMessage: SPCreated {
   
   public override func unmap() -> [String: AnyObject] {
     var result: [String: AnyObject] = [:]
-    if !states.isEmpty {
-      result["states"] = states.map({ i in i.rawValue })
-    }
     if !parts.isEmpty {
       result["parts"] = parts.map({ part in part.unmap() })
     }

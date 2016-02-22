@@ -27,9 +27,6 @@
                  }
                  },
                  "created": "2016-01-30T06:00:33.525Z",
-                 "status": [
-                            "unread"
-                            ],
                  "id": "message-id"
                  },
                  {
@@ -58,9 +55,6 @@
                  }
                  },
                  "created": "2016-01-30T06:00:17.094Z",
-                 "status": [
-                            "unread"
-                            ],
                  "id": "message-id"
                  }
                  ]

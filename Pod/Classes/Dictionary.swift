@@ -33,4 +33,12 @@ extension Dictionary {
     
     return self
   }
+  
+  func containKey(key: Key) -> Bool {
+    if let _ = self[key] {
+      return true
+    } else {
+      return false
+    }
+  }
 }

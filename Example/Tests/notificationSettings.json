@@ -1,9 +1,9 @@
 {
   "settings": {
-    "email": [
-              "newChat",
-              "newMessage"
-              ]
+    "email": {
+      "newChat": true,
+      "newMessage": true
+    }
   },
   "_links": {
     "self": {
