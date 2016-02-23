@@ -54,18 +54,18 @@ public class SPNotificationSettings: SPBase {
   }
   
   public override func unmap() -> [String: AnyObject] {
-    var set: [String: [String: Bool]] = [:]
+    var temp: [String: [String: Bool]] = [:]
     settings.forEach { target, events in
-      if !set.containKey(target.rawValue) {
-        set[target.rawValue] = [:]
+      if !temp.containKey(target.rawValue) {
+        temp[target.rawValue] = [:]
       }
       
       events.forEach { event, enabled in
-        set[target.rawValue]![event.rawValue] = enabled
+        temp[target.rawValue]![event.rawValue] = enabled
       }
     }
     
-    var result: [String: AnyObject] = ["settings": set]
+    var result: [String: AnyObject] = ["settings": temp]
     return result
       .append(super.unmap())
   }

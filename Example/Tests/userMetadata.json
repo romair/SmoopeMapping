@@ -1,0 +1,13 @@
+{
+  "data": {
+    "key": "value"
+  },
+  "_links": {
+    "self": {
+      "href": "http://rest.api/users/meta"
+    },
+    "user": {
+      "href": "http://rest.api/users/user-id"
+    }
+  }
+}

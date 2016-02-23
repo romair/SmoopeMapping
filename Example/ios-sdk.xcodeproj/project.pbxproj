@@ -34,6 +34,8 @@
 		03D8F27F1C6CA2E900EB3425 /* PersonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03D8F27E1C6CA2E900EB3425 /* PersonTests.swift */; };
 		03D8F2831C6CAFFF00EB3425 /* notificationSettings.json in Resources */ = {isa = PBXBuildFile; fileRef = 03D8F2821C6CAFFF00EB3425 /* notificationSettings.json */; };
 		03D8F2851C6CB01D00EB3425 /* NotificationSettingsTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03D8F2841C6CB01D00EB3425 /* NotificationSettingsTest.swift */; };
+		03E55F6D1C7C83730088008F /* UserMetadataTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E55F6C1C7C83730088008F /* UserMetadataTests.swift */; };
+		03E55F701C7C84450088008F /* userMetadata.json in Resources */ = {isa = PBXBuildFile; fileRef = 03E55F6E1C7C84420088008F /* userMetadata.json */; };
 		24F9D6F8E73116E965F7D60C /* Pods_ios_sdk_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 651FBBFED78E898193D6D411 /* Pods_ios_sdk_Tests.framework */; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
 		607FACD81AFB9204008FA782 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* ViewController.swift */; };
@@ -83,6 +85,8 @@
 		03D8F27E1C6CA2E900EB3425 /* PersonTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonTests.swift; sourceTree = "<group>"; };
 		03D8F2821C6CAFFF00EB3425 /* notificationSettings.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = notificationSettings.json; sourceTree = "<group>"; };
 		03D8F2841C6CB01D00EB3425 /* NotificationSettingsTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationSettingsTest.swift; sourceTree = "<group>"; };
+		03E55F6C1C7C83730088008F /* UserMetadataTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserMetadataTests.swift; sourceTree = "<group>"; };
+		03E55F6E1C7C84420088008F /* userMetadata.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = userMetadata.json; sourceTree = "<group>"; };
 		2EC014E6D7CB43A877408049 /* Pods-ios-sdk_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ios-sdk_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ios-sdk_Tests/Pods-ios-sdk_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* ios-sdk_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ios-sdk_Example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -126,6 +130,7 @@
 		03D8F2471C6C615000EB3425 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				03E55F6E1C7C84420088008F /* userMetadata.json */,
 				03D8F2431C6C614D00EB3425 /* business.json */,
 				03D8F25A1C6C855A00EB3425 /* conversation.json */,
 				03D8F2671C6C8E1C00EB3425 /* user.json */,
@@ -215,6 +220,7 @@
 				607FACD11AFB9204008FA782 /* Products */,
 				034447E01C6CD23A00363454 /* MessageTests.swift */,
 				031CD6931C72158D002523B4 /* InvitationTests.swift */,
+				03E55F6C1C7C83730088008F /* UserMetadataTests.swift */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -355,6 +361,7 @@
 				034447DF1C6CD22B00363454 /* messages.json in Resources */,
 				031CD6921C721520002523B4 /* invitations.json in Resources */,
 				034447D41C6CCE0200363454 /* conversations.json in Resources */,
+				03E55F701C7C84450088008F /* userMetadata.json in Resources */,
 				034447D21C6CCD3F00363454 /* businesses.json in Resources */,
 				03D8F26F1C6C8FA000EB3425 /* smartConnect.json in Resources */,
 				034447E31C6CD26800363454 /* message.json in Resources */,
@@ -474,6 +481,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				03D8F2711C6C901200EB3425 /* SmartConnectTests.swift in Sources */,
+				03E55F6D1C7C83730088008F /* UserMetadataTests.swift in Sources */,
 				03D8F2851C6CB01D00EB3425 /* NotificationSettingsTest.swift in Sources */,
 				03D8F26A1C6C8E4A00EB3425 /* UserTests.swift in Sources */,
 				03D8F27F1C6CA2E900EB3425 /* PersonTests.swift in Sources */,

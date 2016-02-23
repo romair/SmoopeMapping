@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		03E55F681C7C81FB0088008F /* SPUserMetadata.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E55F661C7C81B50088008F /* SPUserMetadata.swift */; };
 		095406039B4D371E48D08B38A2975AC8 /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6B4464809049BBF55A940B1ECA0916C /* Error.swift */; };
 		0989D4C99D786C7A97652339077E9897 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C895177D404CBD5981FE18020F2B6A8E /* Foundation.framework */; };
 		0DBB888B5A034471D6CD1D9A7D47313E /* SPUserState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F804C31444B3F247DFFCC5BDA795BA8 /* SPUserState.swift */; };
@@ -254,6 +255,7 @@
 
 /* Begin PBXFileReference section */
 		00363AE37B5B0A29DDA1BF2D22B25172 /* Pods-ios-sdk_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-ios-sdk_Tests.modulemap"; sourceTree = "<group>"; };
+		03E55F661C7C81B50088008F /* SPUserMetadata.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPUserMetadata.swift; sourceTree = "<group>"; };
 		052C574247A4BBDA1D0BB21E8A674F58 /* Alamofire-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Alamofire-dummy.m"; sourceTree = "<group>"; };
 		07F25736B4F533B6BC1FA75EA25439E3 /* ServerTrustPolicy.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ServerTrustPolicy.swift; path = Source/ServerTrustPolicy.swift; sourceTree = "<group>"; };
 		09A0241EF469525063B715A2ACF87150 /* SPPage.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SPPage.swift; sourceTree = "<group>"; };
@@ -516,6 +518,7 @@
 				F6EE28184DB45CAAB316DB27A396A166 /* SPUserList.swift */,
 				5F804C31444B3F247DFFCC5BDA795BA8 /* SPUserState.swift */,
 				F7F45C602F6ABFBEBA5302159F634CD9 /* TraversonOAuthAuthenticator.swift */,
+				03E55F661C7C81B50088008F /* SPUserMetadata.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -1241,6 +1244,7 @@
 				69EA53BFC5DF07211D6E0D059F40EA8B /* SPMappable.swift in Sources */,
 				6F1DBC3F361CAF4FCF406FF2BF6B8470 /* SPMessage.swift in Sources */,
 				B7533D0BDC9A89F7C7A70910E5102B37 /* SPMessageList.swift in Sources */,
+				03E55F681C7C81FB0088008F /* SPUserMetadata.swift in Sources */,
 				7D5B9506B09BC00B04D302785B3A09EA /* SPNotificationSettings.swift in Sources */,
 				6BC9C80FA8C2156161C416478546F60B /* SPPage.swift in Sources */,
 				5EC189855FDC2E59284D912489C08A73 /* SPPagedList.swift in Sources */,
