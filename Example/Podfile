@@ -4,13 +4,13 @@ use_frameworks!
 pod 'SwiftyTraverson', :git => 'https://github.com/smoope/SwiftyTraverson.git'
 pod 'Alamofire', '~> 3.0'
 
-target 'ios-sdk_Example', :exclusive => true do
+target 'ios-sdk_Example'do
   pod 'SmoopeSDK', :path => '../'
   
   pod 'SwiftyTraverson', :git => 'https://github.com/smoope/SwiftyTraverson.git'
 end
 
-target 'ios-sdk_Tests', :exclusive => true do
+target 'ios-sdk_Tests' do
   pod 'SmoopeSDK', :path => '../'
 
   pod 'SwiftyJSON', :git => 'https://github.com/SwiftyJSON/SwiftyJSON.git'
