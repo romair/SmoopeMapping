@@ -11,4 +11,4 @@ before_install:
 
 script:
 - set -o pipefail && xcodebuild test -workspace Example/ios-sdk.xcworkspace -scheme ios-sdk-Tests -destination "platform=iOS Simulator,name=iPhone 6" | xcpretty
-- pod lib lint
+- pod lib lint --sources='https://github.com/CocoaPods/Specs,https://github.com/romair/CocoaPodsSpec.git' --allow-warnings
