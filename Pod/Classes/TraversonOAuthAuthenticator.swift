@@ -20,6 +20,19 @@ import Alamofire
 
 public class TraversonOAuthAuthenticator: TraversonAuthenticator {
   
+  private enum TokenType {
+    case Bearer
+    
+    init?(string: String) {
+      switch string.lowercaseString {
+      case "bearer":
+        self = .Bearer
+      default:
+        return nil
+      }
+    }
+  }
+  
   var clientId: String
   
   var secret: String
@@ -38,15 +51,25 @@ public class TraversonOAuthAuthenticator: TraversonAuthenticator {
     Alamofire.request(.POST, url, parameters: ["grant_type": "client_credentials"], encoding: .URL)
       .authenticate(user: clientId, password: secret)
       .responseJSON { response in
+        
+        var header: String? = nil
+        
         switch response.result {
         case .Success(let json):
           let response = json as! NSDictionary
-          result(authorizationHeader: response.objectForKey("access_token") as? String)
           
-          break
-        default:
-          result(authorizationHeader: nil)
+          if let typeString = response["token_type"] as? String,
+            let tokenType = TokenType(string: typeString),
+            let token = response["access_token"] as? String {
+            
+            switch tokenType {
+            case .Bearer:
+              header = "Bearer \(token)"
+            }
+          }
+        default: ()
         }
+        result(authorizationHeader: header)
     }
   }
 }
