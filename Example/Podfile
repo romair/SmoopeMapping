@@ -1,9 +1,9 @@
 source 'https://github.com/CocoaPods/Specs.git'
-source 'https://github.com/romair/CocoaPodsSpec.git'
+source 'https://github.com/smoope/PodSpecs.git'
 
 use_frameworks!
 
-pod 'SwiftyTraverson', '0.0.0-SNAPSHOT'
+pod 'SwiftyTraverson', '1.0.0-SNAPSHOT'
 
 target 'ios-sdk_Example' do
   pod 'SmoopeSDK', :path => '../'
