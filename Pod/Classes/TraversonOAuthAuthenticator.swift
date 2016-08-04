@@ -48,8 +48,10 @@ public class TraversonOAuthAuthenticator: TraversonAuthenticator {
   }
   
   public func authenticate(result: TraversonAuthenticatorResult) {
-    Alamofire.request(.POST, url, parameters: ["grant_type": "client_credentials"], encoding: .URL)
-      .authenticate(user: clientId, password: secret)
+    Alamofire.request(.POST, url,
+      parameters: ["grant_type": "client_credentials"],
+      encoding: .URL,
+      headers: Request.authorizationHeader(user: clientId, password: secret))
       .responseJSON { response in
         
         var header: String? = nil
